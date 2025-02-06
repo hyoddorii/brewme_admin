@@ -20,9 +20,9 @@
  * toggle 등 CSS 관련된 내용은 /hebees/css/grid/grid_class.css 에 기본값 적용
  */
 
-import AirDatepicker from "air-datepicker";
-import locale_ko from "../libs/air-datepicker/ko.js";
-import dayjs from "dayjs";
+// import AirDatepicker from "air-datepicker";
+// import locale_ko from "../libs/air-datepicker/ko.js";
+// import dayjs from "dayjs";
 
 /**
  * 이벤트 : ag-grid checkbox renderer
@@ -714,76 +714,76 @@ export class grid_header_button_class {
  *
  *
  */
-export class grid_datepicker_renderer_class {
-    init(params) {
-        if(params.node.rowPinned == "bottom"){return}
+// export class grid_datepicker_renderer_class {
+//     init(params) {
+//         if(params.node.rowPinned == "bottom"){return}
 
-        this.eGui = document.createElement('input');
-        this.eGui.value = dayjs(params.value).format(params.dayjs_format);
-        this.eGui.style.height = '100%';
-        this.eGui.style.width = '-webkit-fill-available';
-        this.eGui.style.background = "transparent";
-        this.eGui.style.outline = 'none';
-        this.eGui.style.border = 'none';
+//         this.eGui = document.createElement('input');
+//         this.eGui.value = dayjs(params.value).format(params.dayjs_format);
+//         this.eGui.style.height = '100%';
+//         this.eGui.style.width = '-webkit-fill-available';
+//         this.eGui.style.background = "transparent";
+//         this.eGui.style.outline = 'none';
+//         this.eGui.style.border = 'none';
 
 
-        new AirDatepicker(this.eGui, {
-            locale: locale_ko,
-            dateFormat: params.dateFormat,
-            autoClose: true,
-            selectedDates: this.eGui.value,
-            timepicker: params.timepicker,
-            timeFormat: params.timeFormat,
-            position({$datepicker, $target, $pointer}) {
-                let coords = $target.getBoundingClientRect(),
-                    dpWidth = $datepicker.clientWidth;
+//         new AirDatepicker(this.eGui, {
+//             locale: locale_ko,
+//             dateFormat: params.dateFormat,
+//             autoClose: true,
+//             selectedDates: this.eGui.value,
+//             timepicker: params.timepicker,
+//             timeFormat: params.timeFormat,
+//             position({$datepicker, $target, $pointer}) {
+//                 let coords = $target.getBoundingClientRect(),
+//                     dpWidth = $datepicker.clientWidth;
 
-                let top = coords.y + 34;
-                let left = coords.x - dpWidth/params.location;
+//                 let top = coords.y + 34;
+//                 let left = coords.x - dpWidth/params.location;
 
-                $datepicker.style.left = `${left}px`;
-                $datepicker.style.top = `${top}px`;
+//                 $datepicker.style.left = `${left}px`;
+//                 $datepicker.style.top = `${top}px`;
 
-                $pointer.style.display = 'none';
-            },
-            navTitles: {
-                days: "<strong>등록일:</strong>&nbsp; yyyy / MMMM",
-            },
-            onRenderCell({date, cellType}) {
-                /**
-                 * 그리드의 셀값 선택되게 하려고 selectedDates 옵션을 사용함
-                 * 현재 선택된 값 클릭시 날짜가 해제가 되면서 날짜값 없이 저장이 됨
-                 * 그래서 현재 렌더링 될때의 값은 선택못하게 막아둠
-                 */
-                if (dayjs(date).format('YYYY-MM-DD') == dayjs(params.value).format('YYYY-MM-DD')) {
-                    return {
-                        disabled: true,
-                        classes: 'disabled-class'
-                    }
-                }
-            },
-            onSelect({date,formattedDate,datepicker}) {
-                if(formattedDate != undefined){
-                    params.node.setDataValue(params.colDef.field,formattedDate);
-                    // 이유는 모르겠지만...time 수정할때는 autoClose 작동안함
-                    if(datepicker.timepickerIsActive){
-                        datepicker.hide();
-                    }
-                }
-            }
-        });
-    }
+//                 $pointer.style.display = 'none';
+//             },
+//             navTitles: {
+//                 days: "<strong>등록일:</strong>&nbsp; yyyy / MMMM",
+//             },
+//             onRenderCell({date, cellType}) {
+//                 /**
+//                  * 그리드의 셀값 선택되게 하려고 selectedDates 옵션을 사용함
+//                  * 현재 선택된 값 클릭시 날짜가 해제가 되면서 날짜값 없이 저장이 됨
+//                  * 그래서 현재 렌더링 될때의 값은 선택못하게 막아둠
+//                  */
+//                 if (dayjs(date).format('YYYY-MM-DD') == dayjs(params.value).format('YYYY-MM-DD')) {
+//                     return {
+//                         disabled: true,
+//                         classes: 'disabled-class'
+//                     }
+//                 }
+//             },
+//             onSelect({date,formattedDate,datepicker}) {
+//                 if(formattedDate != undefined){
+//                     params.node.setDataValue(params.colDef.field,formattedDate);
+//                     // 이유는 모르겠지만...time 수정할때는 autoClose 작동안함
+//                     if(datepicker.timepickerIsActive){
+//                         datepicker.hide();
+//                     }
+//                 }
+//             }
+//         });
+//     }
 
-    // *필수* 구성 요소의 DOM 요소를 반환하여 그리드의 셀에 넣습니다.
-    getGui() {
-        return this.eGui;
-    }
+//     // *필수* 구성 요소의 DOM 요소를 반환하여 그리드의 셀에 넣습니다.
+//     getGui() {
+//         return this.eGui;
+//     }
 
-    // 셀이 새로 고쳐질때 마다 실행됩니다
-    refresh() {
-        return true;
-    }
-}
+//     // 셀이 새로 고쳐질때 마다 실행됩니다
+//     refresh() {
+//         return true;
+//     }
+// }
 
 /**
  * 이벤트 : ag-grid img renderer

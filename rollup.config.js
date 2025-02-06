@@ -33,9 +33,11 @@ export default {
 	input: 'src/main.js',
 	output: {
 		sourcemap: true,
-		format: 'iife',
-		name: 'app',
-		file: 'public/build/bundle.js'
+		format: "es",
+		name: "app",
+		dir: "public/build",  // ✅ 여러 개의 번들 파일을 위한 "dir" 사용
+		entryFileNames: "[name].js",  // ✅ 번들 파일명 지정 가능
+		chunkFileNames: "[name]-[hash].js"  // ✅ 동적 import되는 파일명 형식
 	},
 	plugins: [
 		svelte({

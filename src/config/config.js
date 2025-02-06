@@ -3,6 +3,6 @@
 // ----------------------------------------------------------------------------
 
 // AG-GRID
-export const AG_GRID_LICENSE = "PLACE-YOUR-LICENSE-KEY-HERE";
+export const AG_GRID_LICENSE = "";
 
 
