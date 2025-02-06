@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+.input_grid_cls{
+    width: 100%;
+    height:94%;
+    border:1px solid #bdc3c7;
+}
+
+.grid_selectbox_cls{
+    border:1px solid #bdc3c7;
+    width:100%;
+    height: 33px;
+    font-size: 14px;
+}
+
+.btn_delete{
+    /*width: 50px;*/
+    font-size: 11px !important;
+    height: 24px;
+}
+
+/**
+ * 이벤트 : 글자가 들어간 토글버튼
+ * 화면에서 없애기 위해 display:hidden을 줄 경우
+ * 접근성에 문제가 생기는 아래 방법으로 없애는 걸 추천
+ */
+/* aggrid_toggle_with_text (start) */
+input.input_toggle_with_text_cls {
+    position: absolute;
+    left: -3000%;
+}
+input.input_toggle_with_text_cls + label {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    width: 72px;
+    height: 30px;
+    background: #d1d1d1;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+input.input_toggle_with_text_cls + label:before {
+    content: '미사용';
+    font-size: 12px;
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    width: 26px;
+    height: 26px;
+    background: #ffffff;
+    border-radius: 30px;
+    line-height: 26px;
+    text-indent: -37px;
+    color: #fff;
+    transition: all 0.5s;
+}
+input.input_toggle_with_text_cls.active + label:before {
+    right: 44px;
+    background: #fff;
+}
+input.input_toggle_with_text_cls.active + label {
+    background: #00bd18;
+}
+input.input_toggle_with_text_cls + label:after {
+    content: '사용';
+    font-size: 12px;
+    position: absolute;
+    right: -100px;
+    top: 2px;
+    color: #fff;
+    line-height: 26px;
+    transition: all 0.5s;
+}
+input.input_toggle_with_text_cls.active + label:after {
+    right: 12px;
+}
+/* aggrid_toggle_with_text (end) */

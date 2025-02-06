@@ -1,0 +1,119 @@
+.ag-header-group-text{
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+
+.ag-header-group-cell{
+    background-color: #0c2b45;
+}
+
+.ag-theme-balham .ag-root-wrapper {
+    margin-bottom: 30px;
+}
+
+.ag_background_cls{
+    line-height: 1.5 !important;
+    background-color: #f4f7ff;
+}
+
+.ag_admin_cls {
+    line-height: 1.5 !important;
+    background-color: #f4fff6;
+}
+
+.span_title_cls{
+    font-size: 15px;
+    font-weight: bold;
+}
+.span_name_cls{
+    font-size: 11px;
+    font-weight: normal;
+    color: #a3a3a3;
+}
+
+.textarea_status_cls {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: inherit;
+    box-shadow: none;
+    resize: none;
+    height: 20px !important;
+}
+.textarea_status_cls:focus {
+    outline: 1px solid #888;
+    box-shadow: none;
+}
+
+.select_status_cls {
+    width: 150px;
+    border-radius: 0px;
+    height: 32px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+}
+.btn_value_change_cls{
+    width: 150px;
+    border-radius: 0px;
+    height: 32px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-right: 4px;
+}
+.btn_value_change_cls:hover{
+    background-color: #ffd1d1;
+}
+
+.grid_default_cell_style {
+    border-right: 1px solid #d9dcde !important;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.grid_default_bottom_cell_style {
+    border-right: 1px solid #d9dcde !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: #f4f7ff;
+    font-weight: bold;
+}
+
+/* 글씨 색상 */
+.ag_green_cls  { color: green !important; }
+.ag_red_cls    { color: red !important; }
+.ag_blue_cls   { color: #3434f5 !important }
+.ag_purple_cls  { color: #ff808c !important; }
+.ag_yellow_cls { color: #e5a310 !important; }
+.ag_orange_cls { color: #b97f13 !important; }
+.ag_gray_cls   { color: #B6B6B6 !important; } /* 상태가 비활성 (STATUS = 0 ) */
+
+/* 백그라운드 색상 */
+.ag_bg_gray_cls   { background-color: #e8e8e8 !important; }
+.ag_bg_pink_cls   { background-color: #ffbebe !important; }
+.ag_bg_orange_cls { background-color: #ffdc99 !important; }
+.ag_bg_yellow_cls { background-color: #FEF5D4 !important; } /* edit 가능한 색상 */
+.ag_bg_blue_cls   { background-color: #9acfea !important; }
+.ag_bg_white_cls  { background-color: #ffffff !important; }
+.ag_bg_green_cls  { background-color: #def7de !important; }
+.ag_bg_trans_cls  { background-color: #EEEEEE !important; } /* (ag_trans_cls) 퍼니뷰-글라스타 유통사 연결된 상품일때 */
+
+/* ag-grid header 옵션 버튼 */
+.ag-header-icon{
+    display: none !important;
+}
