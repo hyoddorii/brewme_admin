@@ -3,7 +3,7 @@
 </script>
 
 <main>
-    <h1>Welcome to Profile Page</h1>
+    <h1>Welcome to Profile Paggge</h1>
     <p>This is the first screen of the app.</p>
 </main>
 
