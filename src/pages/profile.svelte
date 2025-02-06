@@ -42,11 +42,13 @@
 
 <script>
     import { onMount } from "svelte";
-    import "ag-grid-community/styles/ag-grid.css";
-    import "ag-grid-community/styles/ag-theme-alpine.css";
-    import { LicenseManager } from "ag-grid-enterprise";
-    import { Grid } from "ag-grid-community";
     import { AG_GRID_LICENSE } from "../config/config";
+    import { LicenseManager, Grid } from "ag-grid-enterprise";
+    import 'ag-grid-enterprise/dist/styles/ag-grid.css';
+    import 'ag-grid-enterprise/dist/styles/ag-theme-balham.css';
+    import { AG_GRID_LOCALE_KO } from "../js/grid/grid_locale.ko.js";
+    import { excel_styles } from "../js/grid/grid_excel.js";
+    // import {  } from "ag-grid-community";
 
     let ref_this_grid;
     let grid_options;
@@ -107,7 +109,6 @@
             { 
                 headerName: "매입처명", 
                 field: "supplier_name",
-                filter: "agSetColumnFilter"
             },
         ];
 
@@ -117,15 +118,16 @@
             rowSelection: "single",
             suppressAggFuncInHeader: true,
             suppressRowClickSelection: true,
+            groupSelectsChildren: true,
+            groupSelectsFiltered: true,
             stopEditingWhenCellsLoseFocus: true,
             enableRangeSelection: true,
-            floatingFiltersHeight: 40,
             defaultColDef: {
                 cellClass: ["grid_default_cell_style", "string_type"],
                 resizable: true,
                 sortable: true,
-                floatingFilter: true,
-                filter: "agMultiColumnFilter",
+                floatingFilter: true, // 부동 필터를 활성화 하기위한 설정
+                filter: "agTextColumnFilter", // 문자열 비교를 위한 필터
                 filterParams: {
                     filters: [
                         {
@@ -136,7 +138,11 @@
                         },
                     ],
                 },
+                floatingFilterComponentParams: {
+                    suppressFilterButton: true,
+                },
             },
+            
             suppressPaste: true,
             overlayLoadingTemplate: "<div class='grid_loading'></div>",
             overlayNoRowsTemplate: "<span>검색결과가 없습니다.</span>",
