@@ -52,7 +52,7 @@
 
     async function custom_list() {
         const spreadsheet_id = "15BV89gJHI-Kr9OvUWquuIi69t-NFrHlL6RqX3TlJIQc";  // 여기에 스프레드시트 ID 입력
-        const sheet_name = "수정 시 자동화 코드 주의!";  // 사용 중인 시트 이름으로 변경
+        const sheet_name = "no_edit";  // 사용 중인 시트 이름으로 변경
         const api_key = "AIzaSyDoCUV43uDId92XUWiMZ73ABPFR8V-AGmk";  // Google Sheets API 키 입력
 
         const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheet_id}/values/${sheet_name}!A19:G139?key=${api_key}`;
