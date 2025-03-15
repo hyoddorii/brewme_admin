@@ -1,5 +1,9 @@
-const { app, BrowserWindow } = require('electron');
-const path = require('path');
+import { app, BrowserWindow } from 'electron';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let mainWindow;
 
@@ -12,7 +16,7 @@ app.whenReady().then(() => {
     }
   });
 
-  mainWindow.loadFile(path.join(__dirname, 'public/index.html')); // Svelte 앱 로드
+  mainWindow.loadFile(path.join(__dirname, 'public/index.html'));
 
   mainWindow.on('closed', () => {
     mainWindow = null;
