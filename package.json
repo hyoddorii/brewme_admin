@@ -8,7 +8,8 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
-    "electron": "rollup -c && electron ."
+    "electron": "rollup -c && electron .",
+    "electron:build": "electron-builder"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
@@ -30,5 +31,26 @@
     "jspdf-autotable": "^3.8.4",
     "jspdf-yworks": "^2.1.1",
     "sirv-cli": "^2.0.0"
+  },
+  "build": {
+    "appId": "com.yourapp.id",
+    "productName": "Brewme Admin",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "public/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"]
+    }
   }
 }
