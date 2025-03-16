@@ -13,7 +13,7 @@
         min-width: 560px;
         height: 795px;
         min-height: 795px;
-        padding: 50px 34px;
+        padding: 43px 34px;
         box-sizing: border-box; 
         background-color: #f8eed4;   
         color: #2c622e;
@@ -115,23 +115,24 @@
     </div>
     <div class="div_print_cls">
         <div style="display: flex; align-items: center; justify-content: space-between;">
-            <div style="font-size: 33px; margin-right: 18px;">BREWME</div>
-            <div style="font-size: 11px;">
+            <div style="font-size: 33px; margin-right: 20px;">BREWME</div>
+            <div style="font-size: 10px; line-height: 1.2;">
                 <b>Brewing</b> is not just about getting hot.
                 <b>Brewing</b> is about removing impurities and reaching the essence.
                 In the time that slowly brews you, may you discover a better version of yourself.
             </div>
         </div>
-        <div style="display: flex; align-items: center; justify-content: space-between; margin: 30px 0;">
-            <div style="font-size: 20px;">
-                <div><i>Dear.</i></div>
-                <div><i>Date.</i></div>
+        <div style="display: flex; margin: 38px 6px;">
+            <div style="font-size: 13px; margin-right: 30px;">
+                <div style="display: flex; align-items: center; width: 210px; padding: 0 0 12px 6px; border-bottom: 0.5px solid #2c622e;"><i>Dear.</i></div>
+                <div style="display: flex; align-items: center; width: 210px; padding: 18px 0 12px 6px; border-bottom: 0.5px solid #2c622e;"><i>Date.</i></div>
+                <div style="margin-top: 52px; font-size: 16px;"><i>- Information</i></div>
             </div>
-            <div style="font-size: 12px; margi">
-                끓는다는 것은 단순히 뜨거워지는 일이 아닙니다.
-                끓는다는 것은 불순물을 걷어내고 본질에 다가가는 일입니다.
-                서서히 끓어오르는 시간 속에서,
-                더 나은 당신을 발견할 수 있도록 함께 합니다.
+            <div style="font-size: 8px; line-height: 1.5; margin-top: 15px;">
+                끓는다는 것은 단순히 뜨거워지는 일이 아닙니다.<br>
+                끓는다는 것은 불순물을 걷어내고 본질에 다가가는 일입니다.<br>
+                서서히 끓어오르는 시간 속에서,<br>
+                더 나은 당신을 발견할 수 있도록 함께 합니다.<br>
                 <b>BREW ME BETTER, 브루미입니다.</b>
             </div>
         </div>
