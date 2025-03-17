@@ -146,12 +146,9 @@
     import { Grid } from "ag-grid-community";
     import 'ag-grid-community/styles/ag-grid.css';
     import 'ag-grid-community/styles/ag-theme-balham.css';
-    import { AG_GRID_LOCALE_KO } from "../js/grid/grid_locale.ko.js";
-    import { excel_styles } from "../js/grid/grid_excel.js";
 
     import jsPDF from "jspdf";
     import html2canvas from "html2canvas";
-    // import { mmgd_font_base64 } from "../../public/assets/font/happiness/mmgd.js";
 
     import dayjs from "dayjs";
 
