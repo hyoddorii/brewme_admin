@@ -56,7 +56,7 @@
             </colgroup>
             <tbody>
             <tr>
-                <th>고객명</th>
+                <th>고객ㅇㅇㅇ명</th>
                 <td><input class="input_style" bind:value={ref_profile_obj.cust_name}></td>
                 <th>날짜</th>
                 <td><input type="date" class="input_style" bind:value={ref_profile_obj.date}></td>
@@ -201,11 +201,11 @@
             const formatted_data = data.values.map((row, index) => ({
                 No: parseInt(row[0]) || 0,
                 PRODUCT_NO: row[1] || "",
-                케냐: parseInt(row[2]) || 0,
-                브라질: parseInt(row[3]) || 0,
-                과테말라: parseInt(row[4]) || 0,
-                콜롬비아: parseInt(row[5]) || 0,
-                에티오피아: parseInt(row[6]) || 0,
+                브라질: parseInt(row[2]) || 0,
+                과테말라: parseInt(row[3]) || 0,
+                콜롬비아: parseInt(row[4]) || 0,
+                에티오피아: parseInt(row[5]) || 0,
+                케냐: parseInt(row[6]) || 0,
                 맛: row[13] || "",
             }));
 
@@ -303,10 +303,6 @@
                 field: "PRODUCT_NO",
             },
             { 
-                headerName: "케냐", 
-                field: "케냐",
-            },
-            { 
                 headerName: "브라질", 
                 field: "브라질",
             },
@@ -321,6 +317,10 @@
             { 
                 headerName: "에티오피아", 
                 field: "에티오피아",
+            },
+            { 
+                headerName: "케냐", 
+                field: "케냐",
             },
             { 
                 headerName: "맛", 
