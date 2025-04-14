@@ -12,7 +12,7 @@
     "build": "run-s build:*",
     "build:routify": "routify -b",
     "build:vite": "vite build",
-    "build:electron": "electron-builder --win --x64"
+    "build:electron": "electron-builder --win --x64 --mac"
   },
   "build": {
     "asar": false,
