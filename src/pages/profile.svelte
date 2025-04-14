@@ -56,7 +56,7 @@
             </colgroup>
             <tbody>
             <tr>
-                <th>고객ㅇㅇㅇ명</th>
+                <th>고객명</th>
                 <td><input class="input_style" bind:value={ref_profile_obj.cust_name}></td>
                 <th>날짜</th>
                 <td><input type="date" class="input_style" bind:value={ref_profile_obj.date}></td>
@@ -296,36 +296,36 @@
             { 
                 headerName: "No", 
                 field: "No",
-                width: 60,
+                width: 60
             },
             { 
                 headerName: "상품번호", 
-                field: "PRODUCT_NO",
+                field: "PRODUCT_NO"
             },
             { 
                 headerName: "브라질", 
-                field: "브라질",
+                field: "브라질"
             },
             { 
                 headerName: "과테말라", 
-                field: "과테말라",
+                field: "과테말라"
             },
             { 
                 headerName: "콜롬비아", 
-                field: "콜롬비아",
+                field: "콜롬비아"
             },
             { 
                 headerName: "에티오피아", 
-                field: "에티오피아",
+                field: "에티오피아"
             },
             { 
                 headerName: "케냐", 
-                field: "케냐",
+                field: "케냐"
             },
             { 
                 headerName: "맛", 
                 field: "맛",
-                width: 200,
+                width: 200
             },
             {
                 headerName: "출력",
@@ -338,7 +338,7 @@
                             params: print_btn_renderer_params,
                         };
                     }
-                },
+                }
             },
         ];
 
@@ -372,8 +372,8 @@
                 floatingFilterComponentParams: {
                     suppressFilterButton: true,
                 },
+                suppressMovable: true
             },
-            
             suppressPaste: true,
             overlayLoadingTemplate: "<div class='grid_loading'></div>",
             overlayNoRowsTemplate: "<span>검색결과가 없습니다.</span>",
