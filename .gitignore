@@ -1,4 +1,7 @@
 /node_modules/
 /public/build/
-
+package-lock.json
+dist
+.idea
+.routify
 .DS_Store

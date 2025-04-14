@@ -1,27 +1,45 @@
 {
-  "name": "svelte-app",
+  "name": "brewme_admin",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "main.js",
+  "main": "public/electron.js",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public --no-clear",
-    "electron": "rollup -c && electron .",
-    "electron:build": "electron-builder"
+    "dev": "set NODE_ENV=development&&run-p dev:*",
+    "dev:routify": "routify",
+    "dev:vite": "vite",
+    "dev:electron": "electron .",
+    "build": "run-s build:*",
+    "build:routify": "routify -b",
+    "build:vite": "vite build",
+    "build:electron": "electron-builder --win --x64 --mac"
   },
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-terser": "^0.4.0",
-    "electron": "^35.0.1",
-    "electron-reload": "^2.0.0-alpha.1",
-    "rollup": "^3.15.0",
-    "rollup-plugin-css-only": "^4.3.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^7.1.2",
-    "svelte": "^3.55.0"
+  "build": {
+    "asar": false,
+    "appId": "com.example.brewme_admin",
+    "productName": "brewme_admin",
+    "files": [
+      "dist/**/*",
+      "public/electron.js",
+      "public/favicon.png"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "nsis": {
+      "oneClick": true,
+      "createDesktopShortcut": true
+    },
+    "directories": {
+      "buildResources": "./dist",
+      "output": "./brewme_admin_setup",
+      "app": "."
+    }
   },
   "dependencies": {
     "ag-grid-community": "^28.2.1",
@@ -31,33 +49,17 @@
     "jspdf": "^2.5.2",
     "jspdf-autotable": "^3.8.4",
     "jspdf-yworks": "^2.1.1",
-    "sirv-cli": "^2.0.0"
+    "node-static": "^0.7.11"
   },
-  "build": {
-    "appId": "com.yourapp.id",
-    "productName": "Brewme Admin",
-    "directories": {
-      "output": "dist"
-    },
-    "files": [
-      "public/**/*",
-      "main.js",
-      "package.json"
-    ],
-    "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ]
-    },
-    "mac": {
-      "target": "dmg"
-    },
-    "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ]
-    }
+  "devDependencies": {
+    "@roxi/routify": "^2.18.8",
+    "@sveltejs/vite-plugin-svelte": "^1.0.5",
+    "svelte": "^3.50.0",
+    "svelte-preprocess": "^4.10.7",
+    "@types/node-static": "^0",
+    "npm-run-all": "^4.1.5",
+    "electron": "^35.0.1",
+    "electron-builder": "^25.1.8",
+    "vite": "^3.1.0"
   }
 }
