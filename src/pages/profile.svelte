@@ -3,25 +3,17 @@
         padding: 8px;
         display: flex;
     }
+    .div_container_left_cls {
+        min-width: 820px; 
+        margin-right: 8px;
+    }
     .ag-theme-balham {
         height: calc(100vh - 200px);
         min-height: 200px;
         width: 100%;
     }
-    .div_print_cls {
-        width: 560px;
-        min-width: 560px;
-        height: 795px;
-        min-height: 795px;
-        padding: 44px 30px;
-        box-sizing: border-box; 
-        background-color: #fdf1df;   
-        color: #2c622e;
-        font-family: 'HappinessSans', sans-serif;
-    }
-    .div_print_cls div {
-        /* border: 1px solid #ddd; */
-    }
+
+    /* 항목 입력 테이블 */
     .input_half_style {
         width: 56px;
         margin-right: 4px;
@@ -38,13 +30,234 @@
         padding: 6px;
     }
 
-    .border {
+    /* 프린트 미리보기 영역 */
+    .div_print_cls {
+        width: 560px;
+        min-width: 560px;
+        height: 795px;
+        min-height: 795px;
+        padding: 44px 30px;
+        box-sizing: border-box; 
+        background-color: #fdf1df;   
+        color: #2c622e;
+        font-family: 'HappinessSans', sans-serif;
+    }
+    .div_print_head_cls {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+    }
+    .div_print_head_logo_cls {
+        margin-right: 22px;
+    }
+    .div_print_head_logo_cls img {
+        width: 140px;
+    }
+    .div_print_head_des_cls {
+        font-size: 10px; 
+        line-height: 1.2;
+    }
+    .div_print_content_cls {
+        display: flex; 
+        margin: 37px 6px;
+    }
+    .div_print_content_left_cls {
+        margin-right: 30px;
+    }
+    .div_print_content_right_cls {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /** 프린트 미리보기 (좌측) */
+    .div_print_content_left_head_cls {
+        display: flex; 
+        align-items: center;
+        font-size: 15px; 
+        margin: 31px 0 13.5px 0;
+    }
+    .hr_print_content_left_head_cls {
+        width: 12px;
+        height: 0.5px;
+        border: none; 
+        background-color: #2c622e; 
+        margin: 0 6px 0 0;
+    }
+    .div_print_name_cls {
+        display: flex; 
+        align-items: center; 
+        width: 210px; 
+        border-bottom: 0.5px solid #2c622e; 
+        font-size: 13px;
+        padding: 0 0 12px 6px;
+    }
+    .span_print_name_cls {
+        color: #56514b; 
+        font-size: 12px; 
+        margin-left: 16px;
+    }
+    .div_roasting_type_cls {
+        margin-top: 14px; 
+        font-size: 14px; 
+        font-weight: 600;
+    }
+    .div_grind_type_cls {
+        margin: 7px 0 13px 0; 
+        font-size: 11px;
+    }
+    .div_grind_type_cls span {
+        font-weight: 600;
+    }
+    .div_origin_name_cls {
+        margin-top: 4.5px; 
+        font-size: 12.5px; 
+        font-weight: 600;
+    }
+    .div_origin_name_cls span {
+        font-weight: normal; 
+        font-size: 10px; 
+        margin: 0 4px;
+    }
+    .div_print_good_for_cls {
+        margin-top: 11px; 
+        font-size: 10px;
+    }
+    .div_qr_cls {
+        display: flex; 
+        align-items: end;
+        margin-top: 69px; 
+    }
+    .div_qr_cls img {
+        width: 52px; 
+        height: 52px;
+    }
+    .div_qr_cls div {
+        font-size: 8px; 
+        margin: 0 0 4px 20px;
+    }
+
+    /** 프린트 미리보기 (우측) */
+    .div_print_brand_story_cls {
+        font-size: 8px; 
+        line-height: 1.5;
+    }
+    .div_small_logo_cls {
+        display: flex; 
+        justify-content: space-between;
+        align-items: end;
+    }
+    .div_small_logo_cls div {
+        margin-top: 45px; 
+        font-size: 15px; 
+        font-weight: 600; 
+        line-height: 1.15;
+    }
+    .div_small_logo_cls img {
+        width: 44px; 
+        height: 30px;
+    }
+    .div_tasting_notes_cls {
+        background-color: #818a5c; 
+        color: #fff; 
+        margin-top: 18px; 
+        padding: 14px 16px;
+    }
+    .div_tasting_notes_date_cls {
+        margin-top: 10px;
+        font-size: 9px;
+    }
+    .div_tasting_notes_des_cls {
+        margin: 8px 0;
+        font-size: 9px;
+    }
+    .div_moment_cls {
+        display: flex; 
+        align-items: center; 
+        font-size: 7px; 
+        margin: 6px 0 0 16px;
+    }
+    .div_moment_entry_cls {
+        display: flex; 
+        align-items: center; 
+        width: 50px;
+    }
+    .div_moment_box_cls {
+        width: 8px; 
+        height: 8px; 
+        border: 0.5px solid #fff; 
+        margin-right: 4px;
+    }
+    .div_moment_border_cls {
+        width: 94%;
+        border-top: 0.5px dashed #ccc; 
+        margin: 6px auto 0 auto;
+    }
+    .div_flavor_cls {
+        width: 100%; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: start;
+    }
+    .div_flavor_score_cls {
+        width: 124px; 
+        display: flex; 
+        justify-content: space-between; 
+        margin: 10px 0 0 30px;
+        font-size: 7px; 
+    }
+    .div_flavor_eval_cls {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        margin-top: 6px;
+    }
+    .div_flavor_label_cls {
+        width: 30px;
+        color: #fff; 
+        font-size: 8px; 
+    }
+    .div_flavor_box_cls {
+        width: 124px; 
+        height: 12px;
+        display: flex; 
+        justify-content: space-between;
+        background-color: #fcf0de; 
+    }
+    .div_flavor_border_cls {
         border-left: 0.1px dashed #818a5c;
+    }
+    .div_flavor_total_cls {
+        background-color: #fcf0de; 
+        border-radius: 3px; 
+        color: #2c622e; 
+        font-size: 8.5px; 
+        padding: 6px; 
+        width: 42px;
+        height: 74px; 
+        text-align: center;
+        margin-top: 5px;
+    }
+    .div_flavor_text_cls {
+        background-color: #fcf0de; 
+        border-radius: 3px; 
+        color: #2c622e; 
+        font-size: 8.5px; 
+        padding: 9px; 
+        height: 58px; 
+        margin-top: 8px;
+    }
+
+    /** 프린트 출력하기 버튼 */
+    .btn_print_cls {
+        width: 100%; 
+        height: 38px; 
+        margin-top: 8px; 
+        font-size: 18px;
     }
 </style>
 
 <div class="div_container_cls">
-    <div style="min-width: 820px; margin-right: 8px;">
+    <div class="div_container_left_cls">
         <div class="div_header" style="display: flex; align-items: center; justify-content: space-between;">
             <div>프로파일 출력</div>
             <button on:click={init_profile_input} class="btn btn_red">초기화</button>
@@ -52,9 +265,9 @@
         <table class="table table_bordered" style="margin-bottom: 8px;">
             <colgroup>
                 <col style="width: 10%;">
-                <col style="width: 21%;">
+                <col style="width: 20%;">
                 <col style="width: 10%;">
-                <col style="width: 19%;">
+                <col style="width: 20%;">
                 <col style="width: 10%;">
                 <col style="width: 30%;">
             </colgroup>
@@ -65,42 +278,68 @@
                 <th>날짜</th>
                 <td><input type="date" class="input_style" bind:value={ref_profile_obj.date}></td>
                 <th>로스팅</th>
-                <td>
+                <td colspan="3">
                     <div style="display: flex;">
                         <label class="label_radio_box">
-                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="산뜻한">산뜻한
+                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Light">산뜻한
                         </label>
                         <label class="label_radio_box">
-                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="풍미있는">풍미있는
+                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Medium">풍미있는
                         </label>
                         <label class="label_radio_box">
-                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="향미있는">향미있는
+                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Dark">향미있는
                         </label>
                     </div>
                 </td>
             </tr>
             <tr>
-                <th>물 온도</th>
-                <td>
-                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_temperature_start}>&nbsp;~&nbsp
-                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_temperature_end}>°C
-                </td>
-                <th>물 중량</th>
-                <td><input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_weight} style="width: 110px;">g</td>
-                <th>물 종류</th>
-                <td>
+                <th>분쇄도</th>
+                <td colspan="3">
                     <div style="display: flex;">
                         <label class="label_radio_box">
-                            <input type="radio" name="water_type" bind:group={ref_profile_obj.water_type} value="삼다수">삼다수
+                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="홀빈">홀빈
                         </label>
                         <label class="label_radio_box">
-                            <input type="radio" name="water_type" bind:group={ref_profile_obj.water_type} value="아이시스">아이시스
+                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="에스프레소">에스프레소
                         </label>
                         <label class="label_radio_box">
-                            <input type="radio" name="water_type" bind:group={ref_profile_obj.water_type} value="식수">식수
+                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="핸드드립">핸드드립
+                        </label>
+                        <label class="label_radio_box">
+                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="콜드브루">콜드브루
+                        </label>
+                        <label class="label_radio_box">
+                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="모카포트">모카포트
                         </label>
                     </div>
                 </td>
+                <th></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>물 온도</th>
+                <td><input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_temperature}>°C</td>
+                <th>추출 방법</th>
+                <td>
+                    <select bind:value={ref_profile_obj.grind_recommend} class="select_style">
+                        <option value="홀빈">홀빈</option>
+                        <option value="에스프레소">에스프레소</option>
+                        <option value="핸드드립">핸드드립</option>
+                        <option value="콜드브루">콜드브루</option>
+                        <option value="모카포트">모카포트</option>
+                    </select>
+                </td>
+                <th>원두 중량</th>
+                <td><input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.bean_weight}>g</td>
+            </tr>
+            <tr>
+                <th>뜸 들이기</th>
+                <td colspan="3">
+                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_water}>ml 내리고&nbsp;
+                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_second}>초
+                </td>
+                <th>물의 양</th>
+                <td><input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_weight}>ml</td>               
             </tr>
             <tr>
                 <th>총 추출시간</th>
@@ -117,125 +356,124 @@
         </table>
         <div bind:this={ref_this_grid} class="ag-theme-balham"></div>
     </div>
-    <div class="div_print_cls">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <div style="margin-right: 22px;">
-                <img src="/assets/images/logo.svg" alt="" style="width: 140px;">
+    <div class="div_container_right_cls">
+        <div class="div_print_cls">
+            <div class="div_print_head_cls">
+                <div class="div_print_head_logo_cls">
+                    <img src="/assets/images/logo.svg" alt="">
+                </div>
+                <div class="div_print_head_des_cls">
+                    <b>Brewing</b> is not just about getting hot.
+                    <b>Brewing</b> is about removing impurities and reaching the essence.
+                    In the time that slowly brews you, may you discover a better version of yourself.
+                </div>
             </div>
-            <div style="font-size: 10px; line-height: 1.2;">
-                <b>Brewing</b> is not just about getting hot.
-                <b>Brewing</b> is about removing impurities and reaching the essence.
-                In the time that slowly brews you, may you discover a better version of yourself.
-            </div>
-        </div>
-        <div style="display: flex; margin: 37px 6px;">
-            <div style="margin-right: 30px;">
-                <div style="display: flex; align-items: center; width: 210px; padding: 0 0 12px 6px; border-bottom: 0.5px solid #2c622e; font-size: 13px; ">
-                    <i>Dear. <span style="color: #56514b; font-size: 12px; margin-left: 16px;">민세영</span></i>
-                </div>
-                <div style="display: flex; align-items: center; width: 210px; padding: 18px 0 12px 6px; border-bottom: 0.5px solid #2c622e; font-size: 13px; ">
-                    <i>Date. <span style="color: #56514b; font-size: 12px; margin-left: 16px;">2025.03.04</span></i>
-                </div>
 
-                <div style="margin-top: 48.5px; font-size: 15px; display: flex; align-items: center;">
-                    <hr style="border: none; height: 0.5px; background-color: #2c622e; width: 12px; margin: 0 6px 0 0;"><i>Information</i></div>
-                <div style="margin-top: 14px; font-size: 14px; font-weight: 600;">Medium Roasting</div>
-                <div style="margin-top: 7px; font-size: 11px;"><span style="font-weight: 600;">분쇄도 : </span>산뜻한 (약배전)</div>
-                <div style="margin-top: 13px; font-size: 12.5px; font-weight: 600;">Kenya<span style="font-weight: normal; font-size: 10px; margin: 0 4px;">Natural</span>20%</div>
-                <div style="margin-top: 4.5px; font-size: 12.5px; font-weight: 600;">Brazil<span style="font-weight: normal; font-size: 10px; margin: 0 4px;">Natural</span>20%</div>
-                <div style="margin-top: 4.5px; font-size: 12.5px; font-weight: 600;">Guatemala<span style="font-weight: normal; font-size: 10px; margin: 0 4px;">Natural</span>20%</div>
-                <div style="margin-top: 4.5px; font-size: 12.5px; font-weight: 600;">Colombia<span style="font-weight: normal; font-size: 10px; margin: 0 4px;">Natural</span>20%</div>
-                <div style="margin-top: 4.5px; font-size: 12.5px; font-weight: 600;">Ethiopia<span style="font-weight: normal; font-size: 10px; margin: 0 4px;">Natural</span>20%</div>
-
-                <div style="margin-top: 31px; font-size: 15px; display: flex; align-items: center;">
-                    <hr style="border: none; height: 0.5px; background-color: #2c622e; width: 12px; margin: 0 6px 0 0;"><i>Note</i></div>
-                <div style="margin-top: 13.5px; font-size: 11.5px;">Apricot</div>
-                <div style="margin-top: 3.5px; font-size: 11.5px;">Brown Sugar</div>
-                <div style="margin-top: 3.5px; font-size: 11.5px;">Barley</div>
-                <div style="margin-top: 3.5px; font-size: 11.5px;">Hazelnut</div>
-
-                <div style="margin-top: 31px; font-size: 15px; display: flex; align-items: center;">
-                    <hr style="border: none; height: 0.5px; background-color: #2c622e; width: 12px; margin: 0 6px 0 0;"><i>Good For</i></div>
-                <div style="margin-top: 13.5px; font-size: 10px;"><b>물 온도</b> : 90°C</div>
-                <div style="margin-top: 11px; font-size: 10px;"><b>추출방법</b> : 핸드드립 / <b>원두 중량</b> : 30g</div>
-                <div style="margin-top: 11px; font-size: 10px;"><b>뜸 들이기</b> : 50ml 내리고 30 초</div>
-                <div style="margin-top: 11px; font-size: 10px;"><b>물의 양</b> : 330ml / <b>추출 시간</b> : 2분 ~ 2분 30초</div>
-
-                <div style="margin-top: 69px; display: flex; align-items: end;">
-                    <img src="/assets/images/qrcode/full.svg" alt="" style="width: 52px; height: 52px;">
-                    <div style="font-size: 8px; margin: 0 0 4px 20px;">4 Minutes for You</div>
-                </div>
-
-                
-            </div>
-            <div style="margin-top: 15px; width: 100%;">
-                <div style="font-size: 8px; line-height: 1.5;">
-                    끓는다는 것은 단순히 뜨거워지는 일이 아닙니다.<br>
-                    끓는다는 것은 불순물을 걷어내고 본질에 다가가는 일입니다.<br>
-                    서서히 끓어오르는 시간 속에서,<br>
-                    더 나은 당신을 발견할 수 있도록 함께 합니다.<br>
-                    <b>BREW ME BETTER, 브루미입니다.</b>
-                </div>
-
-                <div style="display: flex; justify-content: space-between; align-items: end;">
-                    <div style="margin-top: 45px; font-size: 15px; font-weight: 600; line-height: 1.15;">
-                        BREW<br>ME<br>BETTER
+            <div class="div_print_content_cls">
+                <div class="div_print_content_left_cls">
+                    <div class="div_print_name_cls">
+                        <i>Dear. <span class="span_print_name_cls">{ref_profile_obj.cust_name}</span></i>
                     </div>
-                    <img src="/assets/images/symbol.svg" alt="" style="width: 44px; height: 30px;">
-                </div>
+                    <div class="div_print_name_cls" style="padding-top: 18px;">
+                        <i>Date. <span class="span_print_name_cls">{ref_profile_obj.date}</span></i>
+                    </div>
 
-                <div style="background-color: #818a5c; color: #fff; margin-top: 18px; padding: 14px 16px;">
-                    <div><i>Tasting Notes :</i></div>
-                    <div style="margin-top: 10px; font-size: 9px;">DATE:<span style="margin: 0 40px;">.</span>.</div>
-                    <div style="margin: 8px 0; font-size: 9px;">이 커피를 추천하는 순간.</div>
-                    {#each Array(moment_row_count) as _, moment_row_idx}
-                        {#if moment_row_idx === 3}
-                            <!-- 위쪽 선 -->
-                            <div style="border-top: 0.5px dashed #ccc; width: 94%; margin: 6px auto 0 auto;"></div>
-                        {/if}
-                        <div style="display: flex; align-items: center; font-size: 7px; margin: 6px 0 0 16px;">
-                            {#each moment_arr.slice(moment_row_idx * moment_row_length, moment_row_idx * moment_row_length + moment_row_length) as item}
-                            <div style="display: flex; align-items: center; width: 50px;">
-                                <div style="width: 8px; height: 8px; border: 0.5px solid #fff; margin-right: 4px;"></div>
-                                <div>{item}</div>
-                            </div>
-                            {/each}
-                        </div>
-                        {#if moment_row_idx === 3}
-                            <!-- 아래쪽 선 -->
-                            <div style="border-top: 0.5px dashed #ccc; width: 94%; margin: 6px auto 0 auto;"></div>
-                        {/if}
+                    <div class="div_print_content_left_head_cls" style="margin-top: 48.5px;">
+                        <hr class="hr_print_content_left_head_cls"><i>Information</i>
+                    </div>
+                    <div class="div_roasting_type_cls">{ref_profile_obj.roasting_type} Roasting</div>
+                    <div class="div_grind_type_cls"><span>분쇄도 : </span>{ref_profile_obj.grind_type}</div>
+                    <div style="height: 81px;">
+                        {#each ref_origin_arr as origin}
+                        <div class="div_origin_name_cls">{origin.name}<span>{origin.process}</span>{origin.ratio}%</div>
                     {/each}
+                    </div>  
 
-                    <div style="font-size: 7px; width: 124px; display: flex; justify-content: space-between; margin: 10px 0 0 30px;"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
-                            
-                    <div style="width: 100%; display: flex; justify-content: space-between; align-items: start;">
-
-                        <div>
-                            {#each flavor_arr as label}
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
-                                <div style="color: #fff; font-size: 8px; width: 30px;">{label}</div>
-                                <div style="width: 124px; display: flex; justify-content: space-between; background-color: #fcf0de; height: 12px;">
-                                {#each Array(5) as _, i}
-                                    <div style="width: 1px; height: 12px;" class:border={i !== 0 && i !== 4}></div>
-                                {/each}
-                                </div>
-                            </div>
-                            {/each}
-                        </div>
-                        <div style="width: 42px; padding: 6px; height: 74px; background-color: #fcf0de; border-radius: 3px; color: #2c622e; font-size: 8.5px; text-align: center; margin-top: 5px;">총 점</div>
+                    <div class="div_print_content_left_head_cls">
+                        <hr class="hr_print_content_left_head_cls"><i>Note</i>
+                    </div>
+                    <div style="height: 56px;">
+                    {#each ref_note_arr as arr}
+                        <div style="margin-top: 3.5px; font-size: 11.5px;">{arr}</div>
+                    {/each}
                     </div>
 
-                    <div style="padding: 9px; height: 58px; background-color: #fcf0de; border-radius: 3px; color: #2c622e; font-size: 9px; margin-top: 8px;"><i>Flavor :</i></div>
-                
+                    <div class="div_print_content_left_head_cls">
+                        <hr class="hr_print_content_left_head_cls" s><i>Good For</i></div>
+                    <div class="div_print_good_for_cls"><b>물 온도</b> : {ref_profile_obj.water_temperature}°C</div>
+                    <div class="div_print_good_for_cls"><b>추출방법</b> : {ref_profile_obj.grind_recommend} / <b>원두 중량</b> : {ref_profile_obj.bean_weight}g</div>
+                    <div class="div_print_good_for_cls"><b>뜸 들이기</b> : {ref_profile_obj.steam_water}ml 내리고 {ref_profile_obj.steam_second} 초</div>
+                    <div class="div_print_good_for_cls"><b>물의 양</b> : {ref_profile_obj.water_weight}ml / <b>추출 시간</b> : {ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
+
+                    <div class="div_qr_cls">
+                        <img src="/assets/images/qrcode/full.svg" alt="">
+                        <div>4 Minutes for You</div>
+                    </div>
                 </div>
 
-                <div style="display: flex; align-items: center; width: 210px; padding: 0 0 12px 6px; border-bottom: 0.5px solid #2c622e; font-size: 13px; margin-top: 48px;">
-                    <i>From Roaster. </i>
+                <div class="div_print_content_right_cls">
+                    <div class="div_print_brand_story_cls">
+                        끓는다는 것은 단순히 뜨거워지는 일이 아닙니다.<br>
+                        끓는다는 것은 불순물을 걷어내고 본질에 다가가는 일입니다.<br>
+                        서서히 끓어오르는 시간 속에서,<br>
+                        더 나은 당신을 발견할 수 있도록 함께 합니다.<br>
+                        <b>BREW ME BETTER, 브루미입니다.</b>
+                    </div>
+
+                    <div class="div_small_logo_cls">
+                        <div>
+                            BREW<br>ME<br>BETTER
+                        </div>
+                        <img src="/assets/images/symbol.svg" alt="">
+                    </div>
+
+                    <div class="div_tasting_notes_cls">
+                        <div><i>Tasting Notes :</i></div>
+                        <div class="div_tasting_notes_date_cls">DATE:<span style="margin: 0 40px;">.</span>.</div>
+                        <div class="div_tasting_notes_des_cls">이 커피를 추천하는 순간.</div>
+                        {#each Array(moment_row_count) as _, moment_row_idx}
+                            {#if moment_row_idx === 3}<div class="div_moment_border_cls"></div>{/if}
+                            <div class="div_moment_cls">
+                                {#each moment_arr.slice(moment_row_idx * moment_row_length, moment_row_idx * moment_row_length + moment_row_length) as item}
+                                <div class="div_moment_entry_cls">
+                                    <div class="div_moment_box_cls"></div>
+                                    <div>{item}</div>
+                                </div>
+                                {/each}
+                            </div>
+                            {#if moment_row_idx === 3}<div class="div_moment_border_cls"></div>{/if}
+                        {/each}
+
+                        <div class="div_flavor_score_cls">
+                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                        </div> 
+                        <div class="div_flavor_cls">
+                            <div>
+                                {#each flavor_arr as label}
+                                <div class="div_flavor_eval_cls">
+                                    <div class="div_flavor_label_cls">{label}</div>
+                                    <div class="div_flavor_box_cls">
+                                    {#each Array(5) as _, i}
+                                        <div style="width: 1px; height: 12px;" class:div_flavor_border_cls={i !== 0 && i !== 4}></div>
+                                    {/each}
+                                    </div>
+                                </div>
+                                {/each}
+                            </div>
+                            <div class="div_flavor_total_cls">총 점</div>
+                        </div>
+
+                        <div class="div_flavor_text_cls"><i>Flavor :</i></div>
+                    </div>
+
+                    <div class="div_print_name_cls" style="margin-top: 48px; width: 242px;">
+                        <i>From Roaster. </i>
+                    </div>
                 </div>
+                
             </div>
-            
         </div>
+        <button on:click={on_click_print} class="btn btn_orange btn_print_cls">출 력 하 기</button>
     </div>
 </div>
 
@@ -254,22 +492,44 @@
 
     import { g_nvl2 } from "../js/common/brewme_common.js";
     import { grid_button2_renderer_class } from "../js/grid/grid_class.js";
+    import { head_selector } from "svelte/internal";
 
     let ref_profile_obj = {
         cust_name: "",
         date: dayjs().format("YYYY-MM-DD"),
         roasting_type: "",
-        water_temperature_start: "92",
-        water_temperature_end: "93",
-        water_weight: "350",
-        water_type: "삼다수",
+        grind_type: "",
+        water_temperature: "90",
+        grind_recommend: "핸드드립",
+        bean_weight: "30",
+        water_weight: "330",
+        steam_water: "50",
+        steam_second: "30",
         brew_start_minute: "2",
-        brew_start_second: "25",
+        brew_start_second: "0",
         brew_end_minute: "2",
-        brew_end_second: "45",
+        brew_end_second: "30",
     }
 
-    let moment_arr = [
+    let ref_origin_arr = [];
+    const origin_process_obj = {
+        브라질: "Natural",
+        과테말라: "Washed",
+        에티오피아: "Washed",
+        케냐: "Washed",
+        콜롬비아: "Washed"
+    };
+    const origin_name_obj = {
+        브라질: "Brazil",
+        과테말라: "Guatemala",
+        에티오피아: "Ethiopia",
+        케냐: "Kenya",
+        콜롬비아: "Colombia"
+    };
+    
+    let ref_note_arr = [];
+
+    const moment_arr = [
         "신나는", "편안한", "설레는", "행복한",
         "우울한", "외로운", "불안한", "슬픈",
         "화난", "짜증나는", "피곤한", "상쾌한",
@@ -277,10 +537,9 @@
         "화창한", "흐린", "추운", "더운",
         "따뜻한", "쌀쌀한", "비오는", "눈오는"
     ];
-    let moment_row_length = 4;
-    let moment_row_count = Math.ceil(moment_arr.length / moment_row_length);
-
-    let flavor_arr = ["향", "고소함", "산미", "쓴맛", "바디감"];
+    const moment_row_length = 4;
+    const moment_row_count = Math.ceil(moment_arr.length / moment_row_length);
+    const flavor_arr = ["향", "고소함", "산미", "쓴맛", "바디감"];
 
     let ref_this_grid;
     let grid_options;
@@ -335,23 +594,30 @@
             cust_name: "",
             date: dayjs().format("YYYY-MM-DD"),
             roasting_type: "",
-            water_temperature_start: "92",
-            water_temperature_end: "93",
-            water_weight: "350",
-            water_type: "삼다수",
+            grind_type: "",
+            water_temperature: "90",
+            grind_recommend: "핸드드립",
+            bean_weight: "30",
+            water_weight: "330",
+            steam_water: "50",
+            steam_second: "30",
             brew_start_minute: "2",
-            brew_start_second: "25",
+            brew_start_second: "0",
             brew_end_minute: "2",
-            brew_end_second: "45",
+            brew_end_second: "30",
         }
+        grid_options.api.deselectAll();
+        ref_origin_arr = [];
+        ref_note_arr = [];
     }
 
-    /** ad-grid 내 출력하기 */
-    function on_click_print(data) {
-        console.log("data", data);
-
+    /** 출력하기 */
+    function on_click_print() {
         if (Object.values(ref_profile_obj).some(value => g_nvl2(value,"") === "")) {
             return alert("빈 항목을 입력해주세요.");
+        }
+        if(ref_origin_arr.length == 0 || ref_note_arr.length == 0) {
+            return alert("원두 행을 선택해주세요.");
         }
 
         const print_area = document.querySelector(".div_print_cls"); // 📌 원하는 영역 선택
@@ -400,11 +666,6 @@
     }
 
     function grid_options_init() {
-        const print_btn_renderer_params = {
-            inner_html: `<button class="btn_grid btn_orange_reverse btn_print_cls" style="width:50px;">출력</button>`,
-            add_class: `.btn_print_cls`,
-            function_name: on_click_print,
-        };
         const column_defs = [
             { 
                 headerName: "No", 
@@ -438,20 +699,7 @@
             { 
                 headerName: "맛", 
                 field: "맛",
-                width: 200
-            },
-            {
-                headerName: "출력",
-                field: "PRINT",
-                cellClass: ["grid_default_cell_style", "text_center"],
-                cellRendererSelector: function(params) {
-                    if(typeof params.data != "undefined") {
-                        return {
-                            component: grid_button2_renderer_class,
-                            params: print_btn_renderer_params,
-                        };
-                    }
-                }
+                width: 280
             },
         ];
 
@@ -460,7 +708,7 @@
             animateRows: true,
             rowSelection: "single",
             suppressAggFuncInHeader: true,
-            suppressRowClickSelection: true,
+            suppressRowClickSelection: false,
             groupSelectsChildren: true,
             groupSelectsFiltered: true,
             stopEditingWhenCellsLoseFocus: true,
@@ -486,6 +734,21 @@
                     suppressFilterButton: true,
                 },
                 suppressMovable: true
+            },
+            onRowClicked: function(params) {
+                ref_origin_arr = [];
+                ref_note_arr = [];
+                ref_note_arr = params.data["맛"].split(",").map(s => s.trim());
+                for (let key in params.data) {
+                    if (origin_process_obj[key] && params.data[key] > 0) {
+                        ref_origin_arr.push({
+                            name: origin_name_obj[key],
+                            process: origin_process_obj[key],
+                            ratio: params.data[key]
+                        });
+                    }
+                }
+                ref_origin_arr = ref_origin_arr;
             },
             suppressPaste: true,
             overlayLoadingTemplate: "<div class='grid_loading'></div>",
