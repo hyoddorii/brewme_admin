@@ -13,7 +13,7 @@
         min-width: 560px;
         height: 795px;
         min-height: 795px;
-        padding: 43px 34px;
+        padding: 44px 30px;
         box-sizing: border-box; 
         background-color: #f8eed4;   
         color: #2c622e;
@@ -127,6 +127,8 @@
                 <div style="display: flex; align-items: center; width: 210px; padding: 0 0 12px 6px; border-bottom: 0.5px solid #2c622e;"><i>Dear.</i></div>
                 <div style="display: flex; align-items: center; width: 210px; padding: 18px 0 12px 6px; border-bottom: 0.5px solid #2c622e;"><i>Date.</i></div>
                 <div style="margin-top: 52px; font-size: 16px;"><i>- Information</i></div>
+                <div style="margin-top: 52px; font-size: 16px;">Medium Roasting<br>분쇄도 : 산뜻한 (약배전)</div>
+                <div style="margin-top: 52px; font-size: 16px;">Kenya Natural 20%</div>
             </div>
             <div style="font-size: 8px; line-height: 1.5; margin-top: 15px;">
                 끓는다는 것은 단순히 뜨거워지는 일이 아닙니다.<br>
