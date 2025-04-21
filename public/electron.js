@@ -22,8 +22,6 @@ app.on("ready", async ()=>{
   // 메뉴바 없애기
   Menu.setApplicationMenu(null);
 
-  main_window.webContents.openDevTools();
-
   // 보여줄 화면
   if (process.env.NODE_ENV === "development") main_window.webContents.openDevTools();
   else {
