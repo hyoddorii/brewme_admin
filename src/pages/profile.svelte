@@ -4,7 +4,7 @@
         display: flex;
     }
     .div_container_left_cls {
-        min-width: 820px; 
+        min-width: 780px; 
         margin-right: 8px;
     }
     .ag-theme-balham {
@@ -29,6 +29,9 @@
     table td {
         padding: 6px;
     }
+    .th_necessary_cls {
+        background-color: #ffd384;
+    }
 
     /* 프린트 미리보기 영역 */
     .div_print_cls {
@@ -48,7 +51,7 @@
         justify-content: space-between;
     }
     .div_print_head_logo_cls {
-        margin-right: 22px;
+        margin: 0 20px 0 6px;
     }
     .div_print_head_logo_cls img {
         width: 140px;
@@ -127,13 +130,18 @@
         align-items: end;
         margin-top: 69px; 
     }
-    .div_qr_cls img {
+    .img_qr_cls {
         width: 52px; 
         height: 52px;
     }
-    .div_qr_cls div {
+    .img_headphone_cls {
+        width: 12px; 
+        height: 12px;
+        margin: 0 0 4px 6px;
+    }
+    .div_qr_des_cls {
         font-size: 8px; 
-        margin: 0 0 4px 20px;
+        margin: 0 0 4px 4px;
     }
 
     /** 프린트 미리보기 (우측) */
@@ -273,27 +281,27 @@
             </colgroup>
             <tbody>
             <tr>
-                <th>고객명</th>
+                <th class="th_necessary_cls">고객명</th>
                 <td><input class="input_style" bind:value={ref_profile_obj.cust_name}></td>
-                <th>날짜</th>
+                <th class="th_necessary_cls">날짜</th>
                 <td><input type="date" class="input_style" bind:value={ref_profile_obj.date}></td>
-                <th>로스팅</th>
+                <th class="th_necessary_cls">로스팅</th>
                 <td colspan="3">
                     <div style="display: flex;">
                         <label class="label_radio_box">
                             <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Light">산뜻한
                         </label>
                         <label class="label_radio_box">
-                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Medium">풍미있는
+                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Medium">균형있는
                         </label>
                         <label class="label_radio_box">
-                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Dark">향미있는
+                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Dark">풍미있는
                         </label>
                     </div>
                 </td>
             </tr>
             <tr>
-                <th>분쇄도</th>
+                <th class="th_necessary_cls">분쇄도</th>
                 <td colspan="3">
                     <div style="display: flex;">
                         <label class="label_radio_box">
@@ -342,7 +350,7 @@
                 <td><input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_weight}>ml</td>               
             </tr>
             <tr>
-                <th>총 추출시간</th>
+                <th>추출 시간</th>
                 <td colspan="3">
                     <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.brew_start_minute}>분
                     <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.brew_start_second} style="margin-left: 4px;">초&nbsp;&nbsp;~ 
@@ -375,7 +383,7 @@
                         <i>Dear. <span class="span_print_name_cls">{ref_profile_obj.cust_name}</span></i>
                     </div>
                     <div class="div_print_name_cls" style="padding-top: 18px;">
-                        <i>Date. <span class="span_print_name_cls">{ref_profile_obj.date}</span></i>
+                        <i>Date. <span class="span_print_name_cls">{dayjs(ref_profile_obj.date).format("YYYY.MM.DD")}</span></i>
                     </div>
 
                     <div class="div_print_content_left_head_cls" style="margin-top: 48.5px;">
@@ -406,8 +414,17 @@
                     <div class="div_print_good_for_cls"><b>물의 양</b> : {ref_profile_obj.water_weight}ml / <b>추출 시간</b> : {ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
 
                     <div class="div_qr_cls">
-                        <img src="/assets/images/qrcode/full.svg" alt="">
-                        <div>4 Minutes for You</div>
+                        {#if ref_profile_obj.roasting_type == "Light"}
+                            <img src="/assets/images/qrcode/light.svg" alt="" class="img_qr_cls">
+                        {:else if ref_profile_obj.roasting_type == "Medium"}
+                            <img src="/assets/images/qrcode/medium.svg" alt="" class="img_qr_cls">
+                        {:else if ref_profile_obj.roasting_type == "Dark"}
+                            <img src="/assets/images/qrcode/dark.svg" alt="" class="img_qr_cls">
+                        {:else}
+                            <div class="img_qr_cls" style="border: 0.5px solid #2c622e;"></div>
+                        {/if}
+                        <img src="/assets/images/qrcode/light.svg" alt="" class="img_headphone_cls">
+                        <div class="div_qr_des_cls">4 Minutes for You</div>
                     </div>
                 </div>
 
@@ -421,9 +438,7 @@
                     </div>
 
                     <div class="div_small_logo_cls">
-                        <div>
-                            BREW<br>ME<br>BETTER
-                        </div>
+                        <div>BREW<br>ME<br>BETTER</div>
                         <img src="/assets/images/symbol.svg" alt="">
                     </div>
 
@@ -582,6 +597,7 @@
             }));
 
             grid_options.api.setRowData(formatted_data); // ag-grid에 데이터 적용
+            grid_options.api.sizeColumnsToFit();
             console.log(`${formatted_data.length}개의 데이터가 그리드에 적용되었습니다.`);
         } catch (error) {
             console.error("데이터 가져오기 실패:", error);
