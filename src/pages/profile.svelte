@@ -423,7 +423,7 @@
                         {:else}
                             <div class="img_qr_cls" style="border: 0.5px solid #2c622e;"></div>
                         {/if}
-                        <img src="/assets/images/qrcode/light.svg" alt="" class="img_headphone_cls">
+                        <img src="/assets/images/headphone.png" alt="" class="img_headphone_cls">
                         <div class="div_qr_des_cls">4 Minutes for You</div>
                     </div>
                 </div>
