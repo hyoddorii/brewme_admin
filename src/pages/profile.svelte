@@ -4,7 +4,7 @@
         display: flex;
     }
     .div_container_left_cls {
-        min-width: 780px; 
+        min-width: 810px; 
         margin-right: 8px;
     }
     .ag-theme-balham {
@@ -131,17 +131,17 @@
         margin-top: 69px; 
     }
     .img_qr_cls {
-        width: 52px; 
-        height: 52px;
+        width: 53px; 
+        height: 53px;
     }
     .img_headphone_cls {
-        width: 12px; 
-        height: 12px;
-        margin: 0 0 4px 6px;
+        width: 14px; 
+        height: 12.5px;
+        margin: 0 0 4px 11px;
     }
     .div_qr_des_cls {
         font-size: 8px; 
-        margin: 0 0 4px 4px;
+        margin: 0 0 5px 6px;
     }
 
     /** 프린트 미리보기 (우측) */
@@ -247,11 +247,11 @@
     }
     .div_flavor_text_cls {
         background-color: #fcf0de; 
-        border-radius: 3px; 
+        border-radius: 6px; 
         color: #2c622e; 
-        font-size: 8.5px; 
-        padding: 9px; 
-        height: 58px; 
+        font-size: 9px; 
+        padding: 10px; 
+        height: 56px; 
         margin-top: 8px;
     }
 
@@ -445,7 +445,7 @@
                     <div class="div_tasting_notes_cls">
                         <div><i>Tasting Notes :</i></div>
                         <div class="div_tasting_notes_date_cls">DATE:<span style="margin: 0 40px;">.</span>.</div>
-                        <div class="div_tasting_notes_des_cls">이 커피를 추천하는 순간.</div>
+                        <div class="div_tasting_notes_des_cls">이 커피를 추천하는 순간</div>
                         {#each Array(moment_row_count) as _, moment_row_idx}
                             {#if moment_row_idx === 3}<div class="div_moment_border_cls"></div>{/if}
                             <div class="div_moment_cls">
@@ -548,7 +548,7 @@
         "신나는", "편안한", "설레는", "행복한",
         "우울한", "외로운", "불안한", "슬픈",
         "화난", "짜증나는", "피곤한", "상쾌한",
-        "이른아침", "한 낮", "해 질 녘", "깊은 저녁",
+        "이른 아침", "한 낮", "해 질 녘", "깊은 저녁",
         "화창한", "흐린", "추운", "더운",
         "따뜻한", "쌀쌀한", "비오는", "눈오는"
     ];
