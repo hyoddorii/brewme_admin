@@ -5,41 +5,13 @@
   "type": "module",
   "main": "public/electron.js",
   "scripts": {
-    "dev": "set NODE_ENV=development&&run-p dev:*",
+    "dev": "run-p dev:*",
     "dev:routify": "routify",
     "dev:vite": "vite",
-    "dev:electron": "electron .",
+    "preview": "vite preview",
     "build": "run-s build:*",
     "build:routify": "routify -b",
-    "build:vite": "vite build",
-    "build:electron": "electron-builder --win --x64 --mac"
-  },
-  "build": {
-    "asar": false,
-    "appId": "com.example.brewme_admin",
-    "productName": "brewme_admin",
-    "files": [
-      "dist/**/*",
-      "public/electron.js",
-      "public/favicon.png"
-    ],
-    "win": {
-      "target": [
-        "nsis"
-      ]
-    },
-    "mac": {
-      "target": "dmg"
-    },
-    "nsis": {
-      "oneClick": true,
-      "createDesktopShortcut": true
-    },
-    "directories": {
-      "buildResources": "./dist",
-      "output": "./brewme_admin_setup",
-      "app": "."
-    }
+    "build:vite": "vite build"
   },
   "dependencies": {
     "ag-grid-community": "^28.2.1",
