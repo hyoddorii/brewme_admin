@@ -41,7 +41,7 @@
         min-height: 795px;
         padding: 44px 30px;
         box-sizing: border-box; 
-        background-color: #fdf1df;   
+        border: 1px solid #fdf1df;   
         color: #2c622e;
         font-family: 'HappinessSans', sans-serif;
     }
