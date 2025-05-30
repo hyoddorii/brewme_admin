@@ -4,12 +4,13 @@
         display: flex;
     }
     .div_container_left_cls {
+        width: 810px; 
         min-width: 810px; 
         margin-right: 8px;
     }
     .ag-theme-balham {
-        height: calc(100vh - 200px);
-        min-height: 200px;
+        height: calc(100vh - 392px);
+        min-height: 485px;
         width: 100%;
     }
 
@@ -31,6 +32,16 @@
     }
     .th_necessary_cls {
         background-color: #ffd384;
+    }
+
+    /* gram 배분 테이블 */
+    .table_gram_cls th {
+        background-color: #6c6c6c;
+        color: #fff;
+    }
+    .table_gram_cls td {
+        background-color: #fcf0de;
+        text-align: center;
     }
 
     /* 프린트 미리보기 영역 */
@@ -362,6 +373,46 @@
             </tbody>
         </table>
         <div bind:this={ref_this_grid} class="ag-theme-balham"></div>
+        <table class="table table_bordered table_gram_cls" style="margin-top: 8px;">
+            <colgroup>
+                <col style="width: 138px;">
+                <col style="width: 79px;">
+                <col style="width: 79px;">
+                <col style="width: 79px;">
+                <col style="width: 79px;">
+                <col style="width: 79px;">
+                <col style="width: 278px;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>200g</th>
+                    <td>{ref_gram_obj["200_Brazil"]} g</td>
+                    <td>{ref_gram_obj["200_Guatemala"]} g</td>
+                    <td>{ref_gram_obj["200_Colombia"]} g</td>
+                    <td>{ref_gram_obj["200_Ethiopia"]} g</td>
+                    <td>{ref_gram_obj["200_Kenya"]} g</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>500g</th>
+                    <td>{ref_gram_obj["500_Brazil"]} g</td>
+                    <td>{ref_gram_obj["500_Guatemala"]} g</td>
+                    <td>{ref_gram_obj["500_Colombia"]} g</td>
+                    <td>{ref_gram_obj["500_Ethiopia"]} g</td>
+                    <td>{ref_gram_obj["500_Kenya"]} g</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>1kg</th>
+                    <td>{ref_gram_obj["1000_Brazil"]} g</td>
+                    <td>{ref_gram_obj["1000_Guatemala"]} g</td>
+                    <td>{ref_gram_obj["1000_Colombia"]} g</td>
+                    <td>{ref_gram_obj["1000_Ethiopia"]} g</td>
+                    <td>{ref_gram_obj["1000_Kenya"]} g</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="div_container_right_cls">
         <div class="div_print_cls">
@@ -521,25 +572,42 @@
         brew_start_second: "0",
         brew_end_minute: "2",
         brew_end_second: "30",
-    }
+    };
+
+    let ref_gram_obj = {
+        "200_Brazil": 0,
+        "200_Guatemala": 0,
+        "200_Colombia": 0,
+        "200_Ethiopia": 0,
+        "200_Kenya": 0,
+        "500_Brazil": 0,
+        "500_Guatemala": 0,
+        "500_Colombia": 0,
+        "500_Ethiopia": 0,
+        "500_Kenya": 0,
+        "1000_Brazil": 0,
+        "1000_Guatemala": 0,
+        "1000_Colombia": 0,
+        "1000_Ethiopia": 0,
+        "1000_Kenya": 0,
+    };
 
     let ref_origin_arr = [];
+    let ref_note_arr = [];
     const origin_process_obj = {
         브라질: "Natural",
         과테말라: "Washed",
+        콜롬비아: "Washed",
         에티오피아: "Washed",
-        케냐: "Washed",
-        콜롬비아: "Washed"
+        케냐: "Washed"
     };
     const origin_name_obj = {
         브라질: "Brazil",
         과테말라: "Guatemala",
+        콜롬비아: "Colombia",
         에티오피아: "Ethiopia",
-        케냐: "Kenya",
-        콜롬비아: "Colombia"
+        케냐: "Kenya"
     };
-    
-    let ref_note_arr = [];
 
     const moment_arr = [
         "신나는", "편안한", "설레는", "행복한",
@@ -618,6 +686,9 @@
             brew_start_second: "0",
             brew_end_minute: "2",
             brew_end_second: "30",
+        }
+        for (const key in ref_gram_obj) {
+            ref_gram_obj[key] = 0;
         }
         grid_options.api.deselectAll();
         ref_origin_arr = [];
@@ -762,6 +833,17 @@
                     }
                 }
                 ref_origin_arr = ref_origin_arr;
+
+                // gram 분배 계산
+                console.log("ref_origin_arr",ref_origin_arr);
+                for (const key in ref_gram_obj) {
+                    ref_gram_obj[key] = 0;
+                }
+                for (let data of ref_origin_arr) {
+                    ref_gram_obj["200_"+data.name] = 200 * (Number(data.ratio) / 100);
+                    ref_gram_obj["500_"+data.name] = 500 * (Number(data.ratio) / 100);
+                    ref_gram_obj["1000_"+data.name] = 1000 * (Number(data.ratio) / 100);
+                }
             },
             suppressPaste: true,
             overlayLoadingTemplate: "<div class='grid_loading'></div>",
