@@ -239,13 +239,13 @@
         height: 12px;
         display: flex; 
         justify-content: space-between;
-        background-color: #fff6ed; 
+        background-color: #fffdf5; 
     }
     .div_flavor_border_cls {
         border-left: 0.1px dashed #818a5c;
     }
     .div_flavor_total_cls {
-        background-color: #fff6ed; 
+        background-color: #fffdf5; 
         border-radius: 3px; 
         color: #2c622e; 
         font-size: 8.5px; 
@@ -256,7 +256,7 @@
         margin-top: 5px;
     }
     .div_flavor_text_cls {
-        background-color: #fff6ed; 
+        background-color: #fffdf5; 
         border-radius: 6px; 
         color: #2c622e; 
         font-size: 9px; 
