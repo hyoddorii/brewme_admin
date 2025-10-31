@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "type": "module",
   "main": "public/electron.js",
@@ -27,14 +27,14 @@
     "node-static": "^0.7.11"
   },
   "devDependencies": {
-    "@roxi/routify": "^2.18.8",
-    "@sveltejs/vite-plugin-svelte": "^1.0.5",
-    "svelte": "^3.50.0",
-    "svelte-preprocess": "^4.10.7",
-    "@types/node-static": "^0",
-    "npm-run-all": "^4.1.5",
-    "electron": "^35.0.1",
+    "@roxi/routify": "^3.5.1",
+    "@sveltejs/vite-plugin-svelte": "6.2.1",
+    "@types/node-static": "^0.7.11",
+    "electron": "^35.1.5",
     "electron-builder": "^25.1.8",
-    "vite": "^3.1.0"
+    "npm-run-all": "^4.1.5",
+    "svelte": "^3.59.2",
+    "svelte-preprocess": "^4.10.7",
+    "vite": "^3.2.11"
   }
 }
