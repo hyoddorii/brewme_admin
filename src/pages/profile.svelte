@@ -277,7 +277,7 @@
 <div class="div_container_cls">
     <div class="div_container_left_cls">
         <div class="div_header" style="display: flex; align-items: center; justify-content: space-between;">
-            <div>커스텀1 프로파일 출력</div>
+            <div>커스텀2 프로파일 출력</div>
             <button on:click={init_profile_input} class="btn btn_red">초기화</button>
         </div>
         <table class="table table_bordered" style="margin-bottom: 8px;">
