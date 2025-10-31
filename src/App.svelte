@@ -1,5 +1,5 @@
 <script>
-  import Layout from "./layout/Layout.svelte";
+    import Profile from "./pages/profile.svelte";
 </script>
 
-<Layout />
+<Profile />
