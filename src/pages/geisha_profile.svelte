@@ -277,7 +277,7 @@
 <div class="div_container_cls">
     <div class="div_container_left_cls">
         <div class="div_header" style="display: flex; align-items: center; justify-content: space-between;">
-            <div>커스텀2 프로파일 출력</div>
+            <div>게이샤 프로파일 출력</div>
             <button on:click={init_profile_input} class="btn btn_red">초기화</button>
         </div>
         <table class="table table_bordered" style="margin-bottom: 8px;">
@@ -538,7 +538,7 @@
                 
             </div>
         </div>
-        <button on:click={on_click_print} class="btn btn_orange btn_print_cls">출 력 하 기</button>
+        <!--<button on:click={on_click_print} class="btn btn_orange btn_print_cls">출 력 하 기</button>-->
     </div>
 </div>
 
