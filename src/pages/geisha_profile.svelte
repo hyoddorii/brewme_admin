@@ -34,238 +34,117 @@
         background-color: #ffd384;
     }
 
-    /* gram 배분 테이블 */
-    .table_gram_cls th {
-        background-color: #6c6c6c;
-        color: #fff;
-    }
-    .table_gram_cls td {
-        background-color: #fcf0de;
-        text-align: center;
-    }
-
-    /* 프린트 미리보기 영역 */
+    /* 프린트 미리보기 */
     .div_print_cls {
+        border: 1px solid;
         width: 560px;
         min-width: 560px;
         height: 795px;
         min-height: 795px;
-        padding: 44px 30px;
+        padding: 24px 16px;
         box-sizing: border-box; 
-        color: #2c622e;
+        background: #1a1615;
+        color: #FCF6E8;
         font-family: 'HappinessSans', sans-serif;
     }
+    .div_print_content_cls {
+        display: flex; 
+        margin: 40px 14px;
+    }
+    .div_print_content_left_cls {
+        width: 50%;
+    }
+    .div_print_content_right_cls {
+        width: 50%;
+    }
+
+    /* 프린트 미리보기 (헤드) */
     .div_print_head_cls {
+        position: relative;
         display: flex;
         align-items: center; 
         justify-content: space-between;
     }
-    .div_print_head_logo_cls {
-        margin: 0 20px 0 6px;
+    .div_print_head_img_cls {
+        width: 526px;
+        height: 305px;
     }
-    .div_print_head_logo_cls img {
-        width: 140px;
-    }
-    .div_print_head_des_cls {
-        font-size: 10px; 
-        line-height: 1.2;
-    }
-    .div_print_content_cls {
-        display: flex; 
-        margin: 37px 6px;
-    }
-    .div_print_content_left_cls {
-        margin-right: 30px;
-    }
-    .div_print_content_right_cls {
+    .div_print_head_img_cls img {
         width: 100%;
-        margin-top: 15px;
+    }
+    .div_print_head_logo_cls {
+        position: absolute;
+        top: 20px;
+        left: 18px;
+        line-height: 1.2;
+        font-size: 14px;
+    }
+    .div_qr_cls {
+        position: absolute;
+        text-align: center;
+        bottom: 22px;
+        right: 20px;
+    }
+    .img_qr_cls {
+        width: 56px; 
+        height: 56px;
+    }
+    .div_qr_des_cls {
+        font-size: 7px; 
+        margin-top: 6px;
     }
 
-    /** 프린트 미리보기 (좌측) */
-    .div_print_content_left_head_cls {
+    /* 프린트 미리보기 (좌/우측) */
+    .div_print_content_logo_cls {
+        margin: 0 20px 0 6px;
+    }
+    .div_print_content_logo_cls img {
+        width: 140px;
+    }
+    .div_print_content_hr_cls {
+        border-bottom: 0.5px solid #FCF6E8;
+        opacity: 70%;
+    }
+    .div_print_content_head_cls {
         display: flex; 
         align-items: center;
         font-size: 15px; 
         margin: 31px 0 13.5px 0;
     }
-    .hr_print_content_left_head_cls {
-        width: 12px;
+    .hr_print_content_head_cls {
+        width: 10px;
         height: 0.5px;
-        border: none; 
-        background-color: #2c622e; 
-        margin: 0 6px 0 0;
+        border: none;
+        background-color: #FCF6E8;
+        margin: 0 10px 0 0;
+        opacity: 50%;
     }
+    .div_print_good_for_cls {
+        display: flex;
+        margin-top: 2px; 
+        font-size: 10px;
+        line-height: 1.6;
+    }
+    .div_print_good_for_head_cls {
+        width: 44px;
+    }
+    .div_print_good_for_dot_cls {
+        margin-right: 6px;
+    }
+
     .div_print_name_cls {
         display: flex; 
         align-items: center; 
         width: 210px; 
-        border-bottom: 0.5px solid #2c622e; 
         font-size: 13px;
-        padding: 0 0 12px 6px;
     }
     .span_print_name_cls {
-        color: #56514b; 
+        color: #FCF6E8; 
         font-size: 12px; 
-        margin-left: 16px;
-    }
-    .div_roasting_type_cls {
-        margin-top: 14px; 
-        font-size: 14px; 
-        font-weight: 600;
-    }
-    .div_grind_type_cls {
-        margin: 7px 0 13px 0; 
-        font-size: 11px;
-    }
-    .div_grind_type_cls span {
-        font-weight: 600;
-    }
-    .div_origin_name_cls {
-        margin-top: 4.5px; 
-        font-size: 12.5px; 
-        font-weight: 600;
-    }
-    .div_origin_name_cls span {
-        font-weight: normal; 
-        font-size: 10px; 
-        margin: 0 4px;
-    }
-    .div_print_good_for_cls {
-        margin-top: 11px; 
-        font-size: 10px;
-    }
-    .div_qr_cls {
-        display: flex; 
-        align-items: end;
-        margin-top: 69px; 
-    }
-    .img_qr_cls {
-        width: 53px; 
-        height: 53px;
-    }
-    .img_headphone_cls {
-        width: 14px; 
-        height: 12.5px;
-        margin: 0 0 4px 11px;
-    }
-    .div_qr_des_cls {
-        font-size: 8px; 
-        margin: 0 0 5px 6px;
+        margin-left: 12px;
     }
 
-    /** 프린트 미리보기 (우측) */
-    .div_print_brand_story_cls {
-        font-size: 8px; 
-        line-height: 1.5;
-    }
-    .div_small_logo_cls {
-        display: flex; 
-        justify-content: space-between;
-        align-items: end;
-    }
-    .div_small_logo_cls div {
-        margin-top: 45px; 
-        font-size: 15px; 
-        font-weight: 600; 
-        line-height: 1.15;
-    }
-    .div_small_logo_cls img {
-        width: 44px; 
-        height: 30px;
-    }
-    .div_tasting_notes_cls {
-        background-color: #818a5c; 
-        color: #fff; 
-        margin-top: 18px; 
-        padding: 14px 16px;
-    }
-    .div_tasting_notes_date_cls {
-        margin-top: 10px;
-        font-size: 9px;
-    }
-    .div_tasting_notes_des_cls {
-        margin: 8px 0;
-        font-size: 9px;
-    }
-    .div_moment_cls {
-        display: flex; 
-        align-items: center; 
-        font-size: 7px; 
-        margin: 6px 0 0 16px;
-    }
-    .div_moment_entry_cls {
-        display: flex; 
-        align-items: center; 
-        width: 50px;
-    }
-    .div_moment_box_cls {
-        width: 8px; 
-        height: 8px; 
-        border: 0.5px solid #fff; 
-        margin-right: 4px;
-    }
-    .div_moment_border_cls {
-        width: 94%;
-        border-top: 0.5px dashed #ccc; 
-        margin: 6px auto 0 auto;
-    }
-    .div_flavor_cls {
-        width: 100%; 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: start;
-    }
-    .div_flavor_score_cls {
-        width: 124px; 
-        display: flex; 
-        justify-content: space-between; 
-        margin: 10px 0 0 30px;
-        font-size: 7px; 
-    }
-    .div_flavor_eval_cls {
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        margin-top: 6px;
-    }
-    .div_flavor_label_cls {
-        width: 30px;
-        color: #fff; 
-        font-size: 8px; 
-    }
-    .div_flavor_box_cls {
-        width: 124px; 
-        height: 12px;
-        display: flex; 
-        justify-content: space-between;
-        background-color: #fffffefa; 
-    }
-    .div_flavor_border_cls {
-        border-left: 0.1px dashed #818a5c;
-    }
-    .div_flavor_total_cls {
-        background-color: #fffffefa; 
-        border-radius: 3px; 
-        color: #2c622e; 
-        font-size: 8.5px; 
-        padding: 6px; 
-        width: 42px;
-        height: 74px; 
-        text-align: center;
-        margin-top: 5px;
-    }
-    .div_flavor_text_cls {
-        background-color: #fffffefa; 
-        border-radius: 6px; 
-        color: #2c622e; 
-        font-size: 9px; 
-        padding: 10px; 
-        height: 56px; 
-        margin-top: 8px;
-    }
-
-    /** 프린트 출력하기 버튼 */
+    /* 프린트 출력하기 버튼 */
     .btn_print_cls {
         width: 100%; 
         height: 38px; 
@@ -331,8 +210,8 @@
                         </label>
                     </div>
                 </td>
-                <th></th>
-                <td></td>
+                <th>추출 도구</th>
+                <td><input class="input_style" bind:value={ref_profile_obj.brew_method}></td>
             </tr>
             <tr>
                 <th>물 온도</th>
@@ -353,8 +232,9 @@
             <tr>
                 <th>뜸 들이기</th>
                 <td colspan="3">
-                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_water}>ml 내리고&nbsp;
-                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_second}>초
+                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_water}>ml (물 
+                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_second}>g)
+                    <input class="input_style" bind:value={ref_profile_obj.steam_method} style="width: 220px;">
                 </td>
                 <th>물의 양</th>
                 <td><input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_weight}>ml</td>               
@@ -373,172 +253,91 @@
             </tbody>
         </table>
         <div bind:this={ref_this_grid} class="ag-theme-balham"></div>
-        <table class="table table_bordered table_gram_cls" style="margin-top: 8px;">
-            <colgroup>
-                <col style="width: 138px;">
-                <col style="width: 79px;">
-                <col style="width: 79px;">
-                <col style="width: 79px;">
-                <col style="width: 79px;">
-                <col style="width: 79px;">
-                <col style="width: 278px;">
-            </colgroup>
-            <tbody>
-                <tr>
-                    <th>200g</th>
-                    <td>{ref_gram_obj["200_Brazil"]} g</td>
-                    <td>{ref_gram_obj["200_Guatemala"]} g</td>
-                    <td>{ref_gram_obj["200_Colombia"]} g</td>
-                    <td>{ref_gram_obj["200_Ethiopia"]} g</td>
-                    <td>{ref_gram_obj["200_Kenya"]} g</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>500g</th>
-                    <td>{ref_gram_obj["500_Brazil"]} g</td>
-                    <td>{ref_gram_obj["500_Guatemala"]} g</td>
-                    <td>{ref_gram_obj["500_Colombia"]} g</td>
-                    <td>{ref_gram_obj["500_Ethiopia"]} g</td>
-                    <td>{ref_gram_obj["500_Kenya"]} g</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>1kg</th>
-                    <td>{ref_gram_obj["1000_Brazil"]} g</td>
-                    <td>{ref_gram_obj["1000_Guatemala"]} g</td>
-                    <td>{ref_gram_obj["1000_Colombia"]} g</td>
-                    <td>{ref_gram_obj["1000_Ethiopia"]} g</td>
-                    <td>{ref_gram_obj["1000_Kenya"]} g</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
     </div>
     <div class="div_container_right_cls">
         <div class="div_print_cls">
             <div class="div_print_head_cls">
-                <div class="div_print_head_logo_cls">
-                    <img src="/assets/images/logo.svg" alt="">
+                <div class="div_print_head_img_cls">
+                    <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.jpg`} alt="">
                 </div>
-                <div class="div_print_head_des_cls">
-                    <b>Brewing</b> is not just about getting hot.
-                    <b>Brewing</b> is about removing impurities and reaching the essence.
-                    In the time that slowly brews you, may you discover a better version of yourself.
+                <div class="div_print_head_logo_cls">
+                    BREW<br>ME<br>BETTER
+                </div>
+                <div class="div_qr_cls">
+                    <img src="/assets/images/qrcode/light.svg" alt="" class="img_qr_cls">
+                    <div class="div_qr_des_cls">4 Minutes for You</div>
                 </div>
             </div>
 
             <div class="div_print_content_cls">
                 <div class="div_print_content_left_cls">
+                    <div class="div_print_content_hr_cls"></div>
+                    <div style="margin: 22px 0 12px; font-size: 14px;">Black Archaive NO.{ref_geisha_obj.NO}</div>
+                    <div class="div_print_content_logo_cls">
+                        <img src="/assets/images/logo_white.svg" alt="">
+                    </div>
+                    <div style="line-height: 1.2;
+    font-size: 11px;
+    margin-top: 16px;
+    height: 58px;
+    display: flex
+;
+    align-items: center;
+    white-space: pre-line;">{ref_geisha_obj.ENG_PRODUCT_NAME}</div>
+                    <div style="font-size: 9px;
+    height: 24px;
+    display: flex
+;
+    align-items: end;
+    white-space: pre-line;
+    line-height: 1.3;">{ref_geisha_obj.KOR_PRODUCT_NAME}</div>
+                    <div class="div_print_content_hr_cls" style="margin:26px 0;"></div>
                     <div class="div_print_name_cls">
-                        <i>Dear. <span class="span_print_name_cls">{ref_profile_obj.cust_name}</span></i>
+                        <i>DEAR : <span class="span_print_name_cls">{ref_profile_obj.cust_name}</span></i>
                     </div>
                     <div class="div_print_name_cls" style="padding-top: 18px;">
-                        <i>Date. <span class="span_print_name_cls">{dayjs(ref_profile_obj.date).format("YYYY.MM.DD")}</span></i>
+                        <i>Roasting Date : <span class="span_print_name_cls">{dayjs(ref_profile_obj.date).format("YYYY.MM.DD")}</span></i>
                     </div>
-
-                    <div class="div_print_content_left_head_cls" style="margin-top: 48.5px;">
-                        <hr class="hr_print_content_left_head_cls"><i>Information</i>
+                    <div class="div_print_content_hr_cls" style="margin: 26px 0 20px 0;"></div>
+                    <div class="div_print_content_head_cls" style="margin: 0 0 14px 0;">
+                        <hr class="hr_print_content_head_cls"><i>Note</i>
                     </div>
-                    <div class="div_roasting_type_cls">{ref_profile_obj.roasting_type} Roasting</div>
-                    <div class="div_grind_type_cls"><span>분쇄도 : </span>{ref_profile_obj.grind_type}</div>
-                    <div style="height: 81px;">
-                        {#each ref_origin_arr as origin}
-                        <div class="div_origin_name_cls">{origin.name}<span>{origin.process}</span>{origin.ratio}%</div>
-                    {/each}
-                    </div>  
-
-                    <div class="div_print_content_left_head_cls">
-                        <hr class="hr_print_content_left_head_cls"><i>Note</i>
-                    </div>
-                    <div style="height: 56px;">
-                    {#each ref_note_arr as arr}
-                        <div style="margin-top: 3.5px; font-size: 11.5px;">{arr}</div>
-                    {/each}
-                    </div>
-
-                    <div class="div_print_content_left_head_cls">
-                        <hr class="hr_print_content_left_head_cls" s><i>Good For</i></div>
-                    <div class="div_print_good_for_cls"><b>물 온도</b> : {ref_profile_obj.water_temperature}°C</div>
-                    <div class="div_print_good_for_cls"><b>추출방법</b> : {ref_profile_obj.grind_recommend} / <b>원두 중량</b> : {ref_profile_obj.bean_weight}g</div>
-                    <div class="div_print_good_for_cls"><b>뜸 들이기</b> : {ref_profile_obj.steam_water}ml 내리고 {ref_profile_obj.steam_second} 초</div>
-                    <div class="div_print_good_for_cls"><b>물의 양</b> : {ref_profile_obj.water_weight}ml / <b>추출 시간</b> : {ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
-
-                    <div class="div_qr_cls">
-                        {#if ref_profile_obj.roasting_type == "Light"}
-                            <img src="/assets/images/qrcode/light.svg" alt="" class="img_qr_cls">
-                        {:else if ref_profile_obj.roasting_type == "Medium"}
-                            <img src="/assets/images/qrcode/medium.svg" alt="" class="img_qr_cls">
-                        {:else if ref_profile_obj.roasting_type == "Dark"}
-                            <img src="/assets/images/qrcode/dark.svg" alt="" class="img_qr_cls">
-                        {:else}
-                            <div class="img_qr_cls" style="border: 0.5px solid #2c622e;"></div>
-                        {/if}
-                        <img src="/assets/images/headphone.png" alt="" class="img_headphone_cls">
-                        <div class="div_qr_des_cls">4 Minutes for You</div>
-                    </div>
+                    <div style="font-size: 10px;
+    margin-bottom: 8px; white-space: pre-line; line-height: 1.5;">{ref_geisha_obj.ENG_NOTE}</div>
+                    <div style="    font-size: 9.6px;
+    opacity: 70%;">{ref_geisha_obj.KOR_NOTE}</div>
                 </div>
 
+                <div style="border-right: 0.5px solid #FCF6E8; height: 404px; margin: 0 28px; opacity: 70%;"></div>
+
                 <div class="div_print_content_right_cls">
-                    <div class="div_print_brand_story_cls">
-                        끓는다는 것은 단순히 뜨거워지는 일이 아닙니다.<br>
-                        끓는다는 것은 불순물을 걷어내고 본질에 다가가는 일입니다.<br>
-                        서서히 끓어오르는 시간 속에서,<br>
-                        더 나은 당신을 발견할 수 있도록 함께 합니다.<br>
-                        <b>BREW ME BETTER, 브루미입니다.</b>
+                    <div class="div_print_content_head_cls" style="margin-top: 14px;">
+                        <hr class="hr_print_content_head_cls"><i>Information</i>
                     </div>
-
-                    <div class="div_small_logo_cls">
-                        <div>BREW<br>ME<br>BETTER</div>
-                        <img src="/assets/images/symbol.svg" alt="">
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">재배고도</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.ALTITUDE}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">생산지</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.ORIGIN_REGION}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">품종</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.VARIETY}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">가공법</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.PROCESS}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">로스팅</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.ROASTING}</div>
+                    
+                    <div class="div_print_content_head_cls">
+                        <hr class="hr_print_content_head_cls"><i>Good For</i>
                     </div>
-
-                    <div class="div_tasting_notes_cls">
-                        <div><i>Tasting Notes :</i></div>
-                        <div class="div_tasting_notes_date_cls">DATE:<span style="margin: 0 40px;">.</span>.</div>
-                        <div class="div_tasting_notes_des_cls">이 커피를 추천하는 순간</div>
-                        {#each Array(moment_row_count) as _, moment_row_idx}
-                            {#if moment_row_idx === 3}<div class="div_moment_border_cls"></div>{/if}
-                            <div class="div_moment_cls">
-                                {#each moment_arr.slice(moment_row_idx * moment_row_length, moment_row_idx * moment_row_length + moment_row_length) as item}
-                                <div class="div_moment_entry_cls">
-                                    <div class="div_moment_box_cls"></div>
-                                    <div>{item}</div>
-                                </div>
-                                {/each}
-                            </div>
-                            {#if moment_row_idx === 3}<div class="div_moment_border_cls"></div>{/if}
-                        {/each}
-
-                        <div class="div_flavor_score_cls">
-                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
-                        </div> 
-                        <div class="div_flavor_cls">
-                            <div>
-                                {#each flavor_arr as label}
-                                <div class="div_flavor_eval_cls">
-                                    <div class="div_flavor_label_cls">{label}</div>
-                                    <div class="div_flavor_box_cls">
-                                    {#each Array(5) as _, i}
-                                        <div style="width: 1px; height: 12px;" class:div_flavor_border_cls={i !== 0 && i !== 4}></div>
-                                    {/each}
-                                    </div>
-                                </div>
-                                {/each}
-                            </div>
-                            <div class="div_flavor_total_cls">총 점</div>
-                        </div>
-
-                        <div class="div_flavor_text_cls"><i>Flavor :</i></div>
-                    </div>
-
-                    <div class="div_print_name_cls" style="margin-top: 48px; width: 242px;">
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출도구</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.brew_method}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물 온도</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_temperature}°C</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출방법</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.grind_recommend}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">원두중량</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.bean_weight}g</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">뜸 들이기</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.steam_water}ml (물 {ref_profile_obj.steam_second}g)<br>{ref_profile_obj.steam_method}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물의 양</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_weight}ml</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출시간</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
+                    <div class="div_print_name_cls" style="margin-top: 44px; border-bottom: 0.5px solid #fcf6e8b3; padding-bottom: 12px; font-size: 12px;">
                         <i>From Roaster. </i>
                     </div>
                 </div>
                 
             </div>
         </div>
-        <!--<button on:click={on_click_print} class="btn btn_orange btn_print_cls">출 력 하 기</button>-->
+        <button on:click={on_click_print} class="btn btn_orange btn_print_cls">출 력 하 기</button>
     </div>
 </div>
 
@@ -562,64 +361,34 @@
         date: dayjs().format("YYYY-MM-DD"),
         roasting_type: "",
         grind_type: "",
-        water_temperature: "90",
+        brew_method: "HARIO v60",
+        water_temperature: "91",
         grind_recommend: "핸드드립",
-        bean_weight: "30",
-        water_weight: "330",
-        steam_water: "50",
-        steam_second: "30",
+        bean_weight: "20",
+        water_weight: "250",
+        steam_water: "40",
+        steam_second: "40",
+        steam_method: "첫 푸어링과 동시에 타이머 시작",
         brew_start_minute: "2",
-        brew_start_second: "0",
+        brew_start_second: "30",
         brew_end_minute: "2",
-        brew_end_second: "30",
+        brew_end_second: "50",
     };
 
-    let ref_gram_obj = {
-        "200_Brazil": 0,
-        "200_Guatemala": 0,
-        "200_Colombia": 0,
-        "200_Ethiopia": 0,
-        "200_Kenya": 0,
-        "500_Brazil": 0,
-        "500_Guatemala": 0,
-        "500_Colombia": 0,
-        "500_Ethiopia": 0,
-        "500_Kenya": 0,
-        "1000_Brazil": 0,
-        "1000_Guatemala": 0,
-        "1000_Colombia": 0,
-        "1000_Ethiopia": 0,
-        "1000_Kenya": 0,
+    let ref_geisha_obj = {
+        NO: "",
+        PRODUCT_NO : "",
+        ENG_PRODUCT_NAME : "",
+        KOR_PRODUCT_NAME : "",
+        ENG_NOTE : "",
+        KOR_NOTE : "",
+        ALTITUDE : "",
+        ORIGIN_REGION : "",
+        VARIETY : "",
+        PROCESS : "",
+        ROASTING : "",
+        IMG_NAME : "geish_1",
     };
-
-    let ref_origin_arr = [];
-    let ref_note_arr = [];
-    const origin_process_obj = {
-        브라질: "Natural",
-        과테말라: "Washed",
-        콜롬비아: "Washed",
-        에티오피아: "Washed",
-        케냐: "Washed"
-    };
-    const origin_name_obj = {
-        브라질: "Brazil",
-        과테말라: "Guatemala",
-        콜롬비아: "Colombia",
-        에티오피아: "Ethiopia",
-        케냐: "Kenya"
-    };
-
-    const moment_arr = [
-        "신나는", "편안한", "설레는", "행복한",
-        "우울한", "외로운", "불안한", "슬픈",
-        "화난", "짜증나는", "피곤한", "상쾌한",
-        "이른 아침", "한 낮", "해 질 녘", "깊은 저녁",
-        "화창한", "흐린", "추운", "더운",
-        "따뜻한", "쌀쌀한", "비오는", "눈오는"
-    ];
-    const moment_row_length = 4;
-    const moment_row_count = Math.ceil(moment_arr.length / moment_row_length);
-    const flavor_arr = ["향", "고소함", "산미", "쓴맛", "바디감"];
 
     let ref_this_grid;
     let grid_options;
@@ -634,10 +403,10 @@
 
     /** 구글 스프레드 시트에 있는 상품 목록 가져와서 세팅 */
     async function set_product() {
-        const spreadsheet_id = "15BV89gJHI-Kr9OvUWquuIi69t-NFrHlL6RqX3TlJIQc";  // 여기에 스프레드시트 ID 입력
+        const spreadsheet_id = "19ihBTMF-2UtvTTlA9v_pfcANQU_iZeqwoev57zwWtuw";  // 여기에 스프레드시트 ID 입력
         const sheet_name = "no_edit";  // 사용 중인 시트 이름으로 변경
         const api_key = "AIzaSyDoCUV43uDId92XUWiMZ73ABPFR8V-AGmk";  // Google Sheets API 키 입력
-        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheet_id}/values/${sheet_name}!A19:N139?key=${api_key}`;
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheet_id}/values/${sheet_name}!A2:L4?key=${api_key}`;
 
         try {
             const response = await fetch(url);
@@ -651,14 +420,18 @@
 
             // 가져온 데이터를 ag-grid에 맞게 변환
             const formatted_data = data.values.map((row, index) => ({
-                No: parseInt(row[0]) || 0,
+                NO: parseInt(row[0]) || 0,
                 PRODUCT_NO: row[1] || "",
-                브라질: parseInt(row[2]) || 0,
-                과테말라: parseInt(row[3]) || 0,
-                콜롬비아: parseInt(row[4]) || 0,
-                에티오피아: parseInt(row[5]) || 0,
-                케냐: parseInt(row[6]) || 0,
-                맛: row[13] || "",
+                ENG_PRODUCT_NAME: row[2] || "",
+                KOR_PRODUCT_NAME: row[3] || "",
+                ENG_NOTE: row[4] || "",
+                KOR_NOTE: row[5] || "",
+                ALTITUDE: row[6] || "",
+                ORIGIN_REGION: row[7] || "",
+                VARIETY: row[8] || "",
+                PROCESS: row[9] || "",
+                ROASTING: row[10] || "",
+                IMG_NAME: row[11] || ""
             }));
 
             grid_options.api.setRowData(formatted_data); // ag-grid에 데이터 적용
@@ -676,23 +449,34 @@
             date: dayjs().format("YYYY-MM-DD"),
             roasting_type: "",
             grind_type: "",
-            water_temperature: "90",
+            brew_method: "HARIO v60",
+            water_temperature: "91",
             grind_recommend: "핸드드립",
-            bean_weight: "30",
-            water_weight: "330",
-            steam_water: "50",
-            steam_second: "30",
+            bean_weight: "20",
+            water_weight: "250",
+            steam_water: "40",
+            steam_second: "40",
+            steam_method: "첫 푸어링과 동시에 타이머 시작",
             brew_start_minute: "2",
-            brew_start_second: "0",
+            brew_start_second: "30",
             brew_end_minute: "2",
-            brew_end_second: "30",
+            brew_end_second: "50",
         }
-        for (const key in ref_gram_obj) {
-            ref_gram_obj[key] = 0;
-        }
+        ref_geisha_obj = {
+            NO : "",
+            PRODUCT_NO : "",
+            ENG_PRODUCT_NAME : "",
+            KOR_PRODUCT_NAME : "",
+            ENG_NOTE : "",
+            KOR_NOTE : "",
+            ALTITUDE : "",
+            ORIGIN_REGION : "",
+            VARIETY : "",
+            PROCESS : "",
+            ROASTING : "",
+            IMG_NAME : "geish_1",
+        };
         grid_options.api.deselectAll();
-        ref_origin_arr = [];
-        ref_note_arr = [];
     }
 
     /** 출력하기 */
@@ -700,7 +484,7 @@
         if (Object.values(ref_profile_obj).some(value => g_nvl2(value,"") === "")) {
             return alert("빈 항목을 입력해주세요.");
         }
-        if(ref_origin_arr.length == 0 || ref_note_arr.length == 0) {
+        if (g_nvl2(ref_geisha_obj.PRODUCT_NO, "") == "") {
             return alert("원두 행을 선택해주세요.");
         }
 
@@ -753,7 +537,7 @@
         const column_defs = [
             { 
                 headerName: "No", 
-                field: "No",
+                field: "NO",
                 width: 60
             },
             { 
@@ -761,29 +545,44 @@
                 field: "PRODUCT_NO"
             },
             { 
-                headerName: "브라질", 
-                field: "브라질"
+                headerName: "영문상품명", 
+                field: "ENG_PRODUCT_NAME"
             },
             { 
-                headerName: "과테말라", 
-                field: "과테말라"
+                headerName: "한글상품명", 
+                field: "KOR_PRODUCT_NAME"
             },
             { 
-                headerName: "콜롬비아", 
-                field: "콜롬비아"
+                headerName: "영문노트", 
+                field: "ENG_NOTE"
             },
             { 
-                headerName: "에티오피아", 
-                field: "에티오피아"
+                headerName: "한글노트", 
+                field: "KOR_NOTE"
             },
             { 
-                headerName: "케냐", 
-                field: "케냐"
+                headerName: "재배고도", 
+                field: "ALTITUDE"
             },
             { 
-                headerName: "맛", 
-                field: "맛",
-                width: 280
+                headerName: "생산지", 
+                field: "ORIGIN_REGION"
+            },
+            { 
+                headerName: "품종", 
+                field: "VARIETY"
+            },
+            { 
+                headerName: "가공법", 
+                field: "PROCESS"
+            },
+            { 
+                headerName: "로스팅", 
+                field: "ROASTING",
+            },
+            { 
+                headerName: "이미지", 
+                field: "IMG_NAME",
             },
         ];
 
@@ -820,30 +619,11 @@
                 suppressMovable: true
             },
             onRowClicked: function(params) {
-                ref_origin_arr = [];
-                ref_note_arr = [];
-                ref_note_arr = params.data["맛"].split(",").map(s => s.trim());
-                for (let key in params.data) {
-                    if (origin_process_obj[key] && params.data[key] > 0) {
-                        ref_origin_arr.push({
-                            name: origin_name_obj[key],
-                            process: origin_process_obj[key],
-                            ratio: params.data[key]
-                        });
-                    }
+                console.log("params", params);
+                for(const key in ref_geisha_obj){
+                    ref_geisha_obj[key] = params.data[key];
                 }
-                ref_origin_arr = ref_origin_arr;
-
-                // gram 분배 계산
-                console.log("ref_origin_arr",ref_origin_arr);
-                for (const key in ref_gram_obj) {
-                    ref_gram_obj[key] = 0;
-                }
-                for (let data of ref_origin_arr) {
-                    ref_gram_obj["200_"+data.name] = 200 * (Number(data.ratio) / 100);
-                    ref_gram_obj["500_"+data.name] = 500 * (Number(data.ratio) / 100);
-                    ref_gram_obj["1000_"+data.name] = 1000 * (Number(data.ratio) / 100);
-                }
+                ref_geisha_obj = ref_geisha_obj;
             },
             suppressPaste: true,
             overlayLoadingTemplate: "<div class='grid_loading'></div>",

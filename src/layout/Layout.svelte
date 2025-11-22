@@ -97,6 +97,7 @@
         margin-left: 0;
         width: 100%;
         transition: margin-left 0.3s ease;
+        overflow: scroll;
     }
 
     /* 사이드바가 열렸을 때 콘텐츠 밀림 효과 */

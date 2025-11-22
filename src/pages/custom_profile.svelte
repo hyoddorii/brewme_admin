@@ -418,7 +418,7 @@
         <div class="div_print_cls">
             <div class="div_print_head_cls">
                 <div class="div_print_head_logo_cls">
-                    <img src="/assets/images/logo.svg" alt="">
+                    <img src="/assets/images/logo_green.svg" alt="">
                 </div>
                 <div class="div_print_head_des_cls">
                     <b>Brewing</b> is not just about getting hot.
@@ -457,7 +457,8 @@
                     </div>
 
                     <div class="div_print_content_left_head_cls">
-                        <hr class="hr_print_content_left_head_cls" s><i>Good For</i></div>
+                        <hr class="hr_print_content_left_head_cls"><i>Good For</i>
+                    </div>
                     <div class="div_print_good_for_cls"><b>물 온도</b> : {ref_profile_obj.water_temperature}°C</div>
                     <div class="div_print_good_for_cls"><b>추출방법</b> : {ref_profile_obj.grind_recommend} / <b>원두 중량</b> : {ref_profile_obj.bean_weight}g</div>
                     <div class="div_print_good_for_cls"><b>뜸 들이기</b> : {ref_profile_obj.steam_water}ml 내리고 {ref_profile_obj.steam_second} 초</div>
