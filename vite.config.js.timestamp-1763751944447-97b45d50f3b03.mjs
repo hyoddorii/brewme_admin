@@ -1,0 +1,14 @@
+// vite.config.js
+import { defineConfig } from "file:///Users/hyojeong/(01)%20%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%86%E1%85%B5/brewme_admin/node_modules/vite/dist/node/index.js";
+import { svelte } from "file:///Users/hyojeong/(01)%20%E1%84%87%E1%85%B3%E1%84%85%E1%85%AE%E1%84%86%E1%85%B5/brewme_admin/node_modules/@sveltejs/vite-plugin-svelte/src/index.js";
+var vite_config_default = defineConfig({
+  plugins: [svelte()],
+  server: {
+    host: "0.0.0.0",
+    port: 3e3
+  }
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCIvVXNlcnMvaHlvamVvbmcvKDAxKSBcdTExMDdcdTExNzNcdTExMDVcdTExNkVcdTExMDZcdTExNzUvYnJld21lX2FkbWluXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ZpbGVuYW1lID0gXCIvVXNlcnMvaHlvamVvbmcvKDAxKSBcdTExMDdcdTExNzNcdTExMDVcdTExNkVcdTExMDZcdTExNzUvYnJld21lX2FkbWluL3ZpdGUuY29uZmlnLmpzXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ltcG9ydF9tZXRhX3VybCA9IFwiZmlsZTovLy9Vc2Vycy9oeW9qZW9uZy8oMDEpJTIwJUUxJTg0JTg3JUUxJTg1JUIzJUUxJTg0JTg1JUUxJTg1JUFFJUUxJTg0JTg2JUUxJTg1JUI1L2JyZXdtZV9hZG1pbi92aXRlLmNvbmZpZy5qc1wiO2ltcG9ydCB7IGRlZmluZUNvbmZpZyB9IGZyb20gJ3ZpdGUnXG5pbXBvcnQgeyBzdmVsdGUgfSBmcm9tICdAc3ZlbHRlanMvdml0ZS1wbHVnaW4tc3ZlbHRlJ1xuXG4vLyBodHRwczovL3ZpdGVqcy5kZXYvY29uZmlnL1xuZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHtcbiAgcGx1Z2luczogW3N2ZWx0ZSgpXSxcbiAgc2VydmVyOiB7XG4gICAgaG9zdDogXCIwLjAuMC4wXCIsXG4gICAgcG9ydDogMzAwMFxuICB9XG59KTtcbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBNFYsU0FBUyxvQkFBb0I7QUFDelgsU0FBUyxjQUFjO0FBR3ZCLElBQU8sc0JBQVEsYUFBYTtBQUFBLEVBQzFCLFNBQVMsQ0FBQyxPQUFPLENBQUM7QUFBQSxFQUNsQixRQUFRO0FBQUEsSUFDTixNQUFNO0FBQUEsSUFDTixNQUFNO0FBQUEsRUFDUjtBQUNGLENBQUM7IiwKICAibmFtZXMiOiBbXQp9Cg==
