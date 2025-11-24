@@ -44,6 +44,7 @@
         min-height: 795px;
         padding: 24px 16px;
         box-sizing: border-box; 
+        background: #040000;
         color: #fcf4e5;
         font-family: 'HappinessSans', sans-serif;
     }
