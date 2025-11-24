@@ -44,7 +44,6 @@
         min-height: 795px;
         padding: 24px 16px;
         box-sizing: border-box; 
-        background: #040000;
         color: #fcf4e5;
         font-family: 'HappinessSans', sans-serif;
     }
@@ -201,8 +200,7 @@
             <tr>
                 <th>뜸 들이기</th>
                 <td colspan="3">
-                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_water}>ml (물 
-                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_second}>ml)
+                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_water}>ml
                     <input class="input_style" bind:value={ref_profile_obj.steam_method} style="width: 182px;">
                 </td>
                 <th>물의 양</th>
@@ -271,7 +269,7 @@
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물 온도</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_temperature}°C</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출방법</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.grind_recommend}</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">원두중량</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.bean_weight}g</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">뜸 들이기</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.steam_water}ml (물 {ref_profile_obj.steam_second}ml)<br>{ref_profile_obj.steam_method}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">뜸 들이기</div><div class="div_print_good_for_dot_cls">•</div>물 {ref_profile_obj.steam_water}ml<br>{ref_profile_obj.steam_method}</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물의 양</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_weight}ml</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출시간</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
                     <div class="div_print_name_cls" style="margin-top: 44px; border-bottom: 0.5px solid #fcf4e5b3; padding-bottom: 12px; font-size: 12px;">
@@ -309,7 +307,6 @@
         bean_weight: "20",
         water_weight: "250",
         steam_water: "40",
-        steam_second: "40",
         steam_method: "첫 푸어링과 동시에 타이머 시작",
         brew_start_minute: "2",
         brew_start_second: "30",
@@ -395,7 +392,6 @@
             bean_weight: "20",
             water_weight: "250",
             steam_water: "40",
-            steam_second: "40",
             steam_method: "첫 푸어링과 동시에 타이머 시작",
             brew_start_minute: "2",
             brew_start_second: "30",
