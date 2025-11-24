@@ -28,6 +28,7 @@
         margin-left: 0;
     }
     table td {
+        height: 26px;
         padding: 6px;
     }
     .th_necessary_cls {
@@ -43,8 +44,8 @@
         min-height: 795px;
         padding: 24px 16px;
         box-sizing: border-box; 
-        background: #1a1615;
-        color: #FCF6E8;
+        background: #040000;
+        color: #fcf4e5;
         font-family: 'HappinessSans', sans-serif;
     }
     .div_print_content_cls {
@@ -72,38 +73,28 @@
     .div_print_head_img_cls img {
         width: 100%;
     }
-    .div_print_head_logo_cls {
-        position: absolute;
-        top: 20px;
-        left: 18px;
-        line-height: 1.2;
-        font-size: 14px;
-    }
-    .div_qr_cls {
-        position: absolute;
-        text-align: center;
-        bottom: 22px;
-        right: 20px;
-    }
-    .img_qr_cls {
-        width: 56px; 
-        height: 56px;
-    }
-    .div_qr_des_cls {
-        font-size: 7px; 
-        margin-top: 6px;
-    }
 
     /* 프린트 미리보기 (좌/우측) */
-    .div_print_content_logo_cls {
-        margin: 0 20px 0 6px;
-    }
-    .div_print_content_logo_cls img {
-        width: 140px;
-    }
     .div_print_content_hr_cls {
-        border-bottom: 0.5px solid #FCF6E8;
+        border-bottom: 0.5px solid #fcf4e5;
         opacity: 70%;
+    }
+    .div_print_content_eng_name_cls {
+        display: flex;
+        align-items: center;
+        white-space: pre-line;
+        height: 58px;
+        margin-top: 16px;
+        font-size: 11px;
+        line-height: 1.2;
+    }
+    .div_print_content_kor_name_cls {
+        display: flex;
+        align-items: end;
+        white-space: pre-line;
+        font-size: 9px;
+        height: 26px;
+        line-height: 1.3;
     }
     .div_print_content_head_cls {
         display: flex; 
@@ -115,9 +106,19 @@
         width: 10px;
         height: 0.5px;
         border: none;
-        background-color: #FCF6E8;
+        background-color: #fcf4e5;
         margin: 0 10px 0 0;
         opacity: 50%;
+    }
+    .div_print_content_eng_note_cls {
+        font-size: 10px;
+        margin-bottom: 8px;
+        white-space: pre-line;
+        line-height: 1.5;
+    }
+    .div_print_content_kor_note_cls {
+        font-size: 9.6px;
+        opacity: 70%;
     }
     .div_print_good_for_cls {
         display: flex;
@@ -131,7 +132,6 @@
     .div_print_good_for_dot_cls {
         margin-right: 6px;
     }
-
     .div_print_name_cls {
         display: flex; 
         align-items: center; 
@@ -139,8 +139,7 @@
         font-size: 13px;
     }
     .span_print_name_cls {
-        color: #FCF6E8; 
-        font-size: 12px; 
+        color: #fcf4e5; 
         margin-left: 12px;
     }
 
@@ -174,44 +173,14 @@
                 <td><input class="input_style" bind:value={ref_profile_obj.cust_name}></td>
                 <th class="th_necessary_cls">날짜</th>
                 <td><input type="date" class="input_style" bind:value={ref_profile_obj.date}></td>
-                <th class="th_necessary_cls">로스팅</th>
-                <td colspan="3">
-                    <div style="display: flex;">
-                        <label class="label_radio_box">
-                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Light">산뜻한
-                        </label>
-                        <label class="label_radio_box">
-                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Medium">균형있는
-                        </label>
-                        <label class="label_radio_box">
-                            <input type="radio" name="roasting_type" bind:group={ref_profile_obj.roasting_type} value="Dark">풍미있는
-                        </label>
-                    </div>
-                </td>
+                <th></th>
+                <td></td>
             </tr>
             <tr>
-                <th class="th_necessary_cls">분쇄도</th>
-                <td colspan="3">
-                    <div style="display: flex;">
-                        <label class="label_radio_box">
-                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="홀빈">홀빈
-                        </label>
-                        <label class="label_radio_box">
-                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="에스프레소">에스프레소
-                        </label>
-                        <label class="label_radio_box">
-                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="핸드드립">핸드드립
-                        </label>
-                        <label class="label_radio_box">
-                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="콜드브루">콜드브루
-                        </label>
-                        <label class="label_radio_box">
-                            <input type="radio" name="grind_type" bind:group={ref_profile_obj.grind_type} value="모카포트">모카포트
-                        </label>
-                    </div>
-                </td>
-                <th>추출 도구</th>
-                <td><input class="input_style" bind:value={ref_profile_obj.brew_method}></td>
+                <th></th>
+                <td colspan="3"></td>
+                <th></th>
+                <td></td>
             </tr>
             <tr>
                 <th>물 온도</th>
@@ -233,8 +202,8 @@
                 <th>뜸 들이기</th>
                 <td colspan="3">
                     <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_water}>ml (물 
-                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_second}>g)
-                    <input class="input_style" bind:value={ref_profile_obj.steam_method} style="width: 220px;">
+                    <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_second}>ml)
+                    <input class="input_style" bind:value={ref_profile_obj.steam_method} style="width: 182px;">
                 </td>
                 <th>물의 양</th>
                 <td><input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_weight}>ml</td>               
@@ -247,8 +216,8 @@
                     <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.brew_end_minute} style="margin-left: 4px;">분 
                     <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.brew_end_second} style="margin-left: 4px;">초
                 </td>
-                <th></th>
-                <td></td>
+                <th>추출 도구</th>
+                <td><input class="input_style" bind:value={ref_profile_obj.brew_method}></td>
             </tr>
             </tbody>
         </table>
@@ -258,40 +227,18 @@
         <div class="div_print_cls">
             <div class="div_print_head_cls">
                 <div class="div_print_head_img_cls">
-                    <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.jpg`} alt="">
-                </div>
-                <div class="div_print_head_logo_cls">
-                    BREW<br>ME<br>BETTER
-                </div>
-                <div class="div_qr_cls">
-                    <img src="/assets/images/qrcode/light.svg" alt="" class="img_qr_cls">
-                    <div class="div_qr_des_cls">4 Minutes for You</div>
+                    <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.png`} alt="">
                 </div>
             </div>
 
             <div class="div_print_content_cls">
                 <div class="div_print_content_left_cls">
                     <div class="div_print_content_hr_cls"></div>
-                    <div style="margin: 22px 0 12px; font-size: 14px;">Black Archaive NO.{ref_geisha_obj.NO}</div>
-                    <div class="div_print_content_logo_cls">
-                        <img src="/assets/images/logo_white.svg" alt="">
-                    </div>
-                    <div style="line-height: 1.2;
-    font-size: 11px;
-    margin-top: 16px;
-    height: 58px;
-    display: flex
-;
-    align-items: center;
-    white-space: pre-line;">{ref_geisha_obj.ENG_PRODUCT_NAME}</div>
-                    <div style="font-size: 9px;
-    height: 24px;
-    display: flex
-;
-    align-items: end;
-    white-space: pre-line;
-    line-height: 1.3;">{ref_geisha_obj.KOR_PRODUCT_NAME}</div>
-                    <div class="div_print_content_hr_cls" style="margin:26px 0;"></div>
+                    <div style="margin: 24px 0 12px; font-size: 14px;">Black Archive NO.{ref_geisha_obj.NO}</div>
+                    <img src="/assets/images/logo_white.svg" alt="" style="width: 168px;">
+                    <div class="div_print_content_eng_name_cls">{ref_geisha_obj.ENG_PRODUCT_NAME}</div>
+                    <div class="div_print_content_kor_name_cls">{ref_geisha_obj.KOR_PRODUCT_NAME}</div>
+                    <div class="div_print_content_hr_cls" style="margin:22px 0 24px 0;"></div>
                     <div class="div_print_name_cls">
                         <i>DEAR : <span class="span_print_name_cls">{ref_profile_obj.cust_name}</span></i>
                     </div>
@@ -302,13 +249,11 @@
                     <div class="div_print_content_head_cls" style="margin: 0 0 14px 0;">
                         <hr class="hr_print_content_head_cls"><i>Note</i>
                     </div>
-                    <div style="font-size: 10px;
-    margin-bottom: 8px; white-space: pre-line; line-height: 1.5;">{ref_geisha_obj.ENG_NOTE}</div>
-                    <div style="    font-size: 9.6px;
-    opacity: 70%;">{ref_geisha_obj.KOR_NOTE}</div>
+                    <div class="div_print_content_eng_note_cls">{ref_geisha_obj.ENG_NOTE}</div>
+                    <div class="div_print_content_kor_note_cls">{ref_geisha_obj.KOR_NOTE}</div>
                 </div>
 
-                <div style="border-right: 0.5px solid #FCF6E8; height: 404px; margin: 0 28px; opacity: 70%;"></div>
+                <div style="border-right: 0.5px solid #fcf4e5; height: 404px; margin: 0 28px; opacity: 70%;"></div>
 
                 <div class="div_print_content_right_cls">
                     <div class="div_print_content_head_cls" style="margin-top: 14px;">
@@ -319,7 +264,6 @@
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">품종</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.VARIETY}</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">가공법</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.PROCESS}</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">로스팅</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.ROASTING}</div>
-                    
                     <div class="div_print_content_head_cls">
                         <hr class="hr_print_content_head_cls"><i>Good For</i>
                     </div>
@@ -327,11 +271,11 @@
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물 온도</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_temperature}°C</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출방법</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.grind_recommend}</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">원두중량</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.bean_weight}g</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">뜸 들이기</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.steam_water}ml (물 {ref_profile_obj.steam_second}g)<br>{ref_profile_obj.steam_method}</div>
+                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">뜸 들이기</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.steam_water}ml (물 {ref_profile_obj.steam_second}ml)<br>{ref_profile_obj.steam_method}</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물의 양</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_weight}ml</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출시간</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
-                    <div class="div_print_name_cls" style="margin-top: 44px; border-bottom: 0.5px solid #fcf6e8b3; padding-bottom: 12px; font-size: 12px;">
-                        <i>From Roaster. </i>
+                    <div class="div_print_name_cls" style="margin-top: 44px; border-bottom: 0.5px solid #fcf4e5b3; padding-bottom: 12px; font-size: 12px;">
+                        <i>From Roaster : </i>
                     </div>
                 </div>
                 
@@ -359,8 +303,6 @@
     let ref_profile_obj = {
         cust_name: "",
         date: dayjs().format("YYYY-MM-DD"),
-        roasting_type: "",
-        grind_type: "",
         brew_method: "HARIO v60",
         water_temperature: "91",
         grind_recommend: "핸드드립",
@@ -387,7 +329,7 @@
         VARIETY : "",
         PROCESS : "",
         ROASTING : "",
-        IMG_NAME : "geish_1",
+        IMG_NAME : "geisha_1",
     };
 
     let ref_this_grid;
@@ -447,8 +389,6 @@
         ref_profile_obj = {
             cust_name: "",
             date: dayjs().format("YYYY-MM-DD"),
-            roasting_type: "",
-            grind_type: "",
             brew_method: "HARIO v60",
             water_temperature: "91",
             grind_recommend: "핸드드립",
@@ -474,7 +414,7 @@
             VARIETY : "",
             PROCESS : "",
             ROASTING : "",
-            IMG_NAME : "geish_1",
+            IMG_NAME : "geisha_1",
         };
         grid_options.api.deselectAll();
     }

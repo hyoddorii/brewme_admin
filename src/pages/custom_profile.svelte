@@ -28,6 +28,7 @@
         margin-left: 0;
     }
     table td {
+        height: 26px;
         padding: 6px;
     }
     .th_necessary_cls {
