@@ -44,8 +44,7 @@
         min-height: 795px;
         padding: 24px 16px;
         box-sizing: border-box; 
-        background: #040000;
-        color: #fcf4e5;
+        color: #040000;
         font-family: 'HappinessSans', sans-serif;
     }
     .div_print_content_cls {
@@ -76,7 +75,7 @@
 
     /* 프린트 미리보기 (좌/우측) */
     .div_print_content_hr_cls {
-        border-bottom: 0.5px solid #fcf4e5;
+        border-bottom: 0.5px solid #040000;
         opacity: 70%;
     }
     .div_print_content_eng_name_cls {
@@ -106,7 +105,7 @@
         width: 10px;
         height: 0.5px;
         border: none;
-        background-color: #fcf4e5;
+        background-color: #040000;
         margin: 0 10px 0 0;
         opacity: 50%;
     }
@@ -139,7 +138,7 @@
         font-size: 13px;
     }
     .span_print_name_cls {
-        color: #fcf4e5; 
+        color: #040000; 
         margin-left: 12px;
     }
 
@@ -234,7 +233,7 @@
                 <div class="div_print_content_left_cls">
                     <div class="div_print_content_hr_cls"></div>
                     <div style="margin: 24px 0 12px; font-size: 14px;">Black Archive NO.{ref_geisha_obj.NO}</div>
-                    <img src="/assets/images/logo_white.svg" alt="" style="width: 168px;">
+                    <img src="/assets/images/logo_green.svg" alt="" style="width: 168px;">
                     <div class="div_print_content_eng_name_cls">{ref_geisha_obj.ENG_PRODUCT_NAME}</div>
                     <div class="div_print_content_kor_name_cls">{ref_geisha_obj.KOR_PRODUCT_NAME}</div>
                     <div class="div_print_content_hr_cls" style="margin:22px 0 24px 0;"></div>
@@ -252,7 +251,7 @@
                     <div class="div_print_content_kor_note_cls">{ref_geisha_obj.KOR_NOTE}</div>
                 </div>
 
-                <div style="border-right: 0.5px solid #fcf4e5; height: 404px; margin: 0 28px; opacity: 70%;"></div>
+                <div style="border-right: 0.5px solid #040000; height: 404px; margin: 0 28px; opacity: 70%;"></div>
 
                 <div class="div_print_content_right_cls">
                     <div class="div_print_content_head_cls" style="margin-top: 14px;">
@@ -273,7 +272,7 @@
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">뜸 들이기</div><div class="div_print_good_for_dot_cls">•</div>물 {ref_profile_obj.steam_water}ml<br>{ref_profile_obj.steam_method}</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물의 양</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_weight}ml</div>
                     <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출시간</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
-                    <div class="div_print_name_cls" style="margin-top: 44px; border-bottom: 0.5px solid #fcf4e5b3; padding-bottom: 12px; font-size: 12px;">
+                    <div class="div_print_name_cls" style="margin-top: 44px; border-bottom: 0.5px solid #040000b3; padding-bottom: 12px; font-size: 12px;">
                         <i>From Roaster : </i>
                     </div>
                 </div>
