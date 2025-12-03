@@ -35,111 +35,95 @@
         background-color: #ffd384;
     }
 
-    /* 프린트 미리보기 */
+    /* 프린트 미리보기 (큰 틀) */
     .div_print_cls {
         border: 1px solid;
         width: 560px;
         min-width: 560px;
         height: 795px;
         min-height: 795px;
-        padding: 24px 16px;
+        padding: 23px 12px;
         box-sizing: border-box; 
         color: #040000;
         font-family: 'HappinessSans', sans-serif;
+        white-space: pre-line;
     }
-    .div_print_content_cls {
+    .div_print_top_cls {
+        text-align: end;
+        margin: 0 10px 4px;
+    }
+    .div_print_middle_cls {
         display: flex; 
-        margin: 40px 14px;
-    }
-    .div_print_content_left_cls {
-        width: 50%;
-    }
-    .div_print_content_right_cls {
-        width: 50%;
-    }
-
-    /* 프린트 미리보기 (헤드) */
-    .div_print_head_cls {
-        position: relative;
-        display: flex;
-        align-items: center; 
         justify-content: space-between;
     }
-    .div_print_head_img_cls {
-        width: 526px;
-        height: 305px;
+    .div_print_middle_left_cls {
+        padding-left: 12px;
     }
-    .div_print_head_img_cls img {
-        width: 100%;
+    .div_print_bottom_cls {
+        display: flex;
+        margin-top: 10px;
     }
 
-    /* 프린트 미리보기 (좌/우측) */
-    .div_print_content_hr_cls {
-        border-bottom: 0.5px solid #040000;
-        opacity: 70%;
-    }
-    .div_print_content_eng_name_cls {
-        display: flex;
-        align-items: center;
-        white-space: pre-line;
-        height: 58px;
-        margin-top: 16px;
-        font-size: 11px;
-        line-height: 1.2;
-    }
-    .div_print_content_kor_name_cls {
-        display: flex;
-        align-items: end;
-        white-space: pre-line;
-        font-size: 9px;
-        height: 26px;
+    /* 프린트 미리보기 (상세) */
+    .div_print_eng_name_cls {
+        height: 88px;
+        font-size: 14px;
         line-height: 1.3;
+        letter-spacing: -0.3px;
     }
-    .div_print_content_head_cls {
+    .div_print_kor_name_cls {
+        font-size: 12px;
+        height: 152px;
+        line-height: 1.6;
+        color: #504741;
+    }
+    .div_print_cust_name_cls {
         display: flex; 
+        align-items: center; 
+        font-size: 11px;
+        color: #737373;
+        margin-bottom: 12px;
+    }
+    .span_print_cust_name_cls {
+        margin-left: 6px;
+    }
+    .div_print_bottom_des_cls { 
+        border: 1px solid #616161;
+        padding: 20px 0 0 14px;
+        height: 188px;
+        width: 172px;
+    }
+    .div_print_bottom_des_head_cls {
+        display: flex;
         align-items: center;
-        font-size: 15px; 
-        margin: 31px 0 13.5px 0;
+        font-size: 16px;
+        margin-bottom: 16px;
+        font-weight: 900;
     }
-    .hr_print_content_head_cls {
-        width: 10px;
-        height: 0.5px;
-        border: none;
-        background-color: #040000;
-        margin: 0 10px 0 0;
-        opacity: 50%;
-    }
-    .div_print_content_eng_note_cls {
-        font-size: 10px;
-        margin-bottom: 8px;
-        white-space: pre-line;
-        line-height: 1.5;
-    }
-    .div_print_content_kor_note_cls {
-        font-size: 9.6px;
-        opacity: 70%;
-    }
-    .div_print_good_for_cls {
+    .div_print_info_cls {
         display: flex;
         margin-top: 2px; 
         font-size: 10px;
         line-height: 1.6;
+        color: #5a5a5a;
     }
-    .div_print_good_for_head_cls {
-        width: 44px;
+    .div_print_info_head_cls {
+        width: 42px;
     }
-    .div_print_good_for_dot_cls {
-        margin-right: 6px;
+    .div_print_info_dot_cls {
+        margin-right: 4px;
     }
-    .div_print_name_cls {
-        display: flex; 
-        align-items: center; 
-        width: 210px; 
-        font-size: 13px;
+    .div_print_eng_note_cls {
+        font-size: 10px;
+        margin-bottom: 8px;
+        line-height: 1.7;
+        color: #5a5a5a;
     }
-    .span_print_name_cls {
-        color: #040000; 
-        margin-left: 12px;
+    .div_print_kor_note_cls {
+        font-size: 10px;
+        line-height: 1.7;
+        color: #5a5a5a
+        
     }
 
     /* 프린트 출력하기 버튼 */
@@ -201,7 +185,7 @@
                 <th>뜸 들이기</th>
                 <td colspan="3">
                     <input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.steam_water}>ml
-                    <input class="input_style" bind:value={ref_profile_obj.steam_method} style="width: 182px;">
+                    <input class="input_style" bind:value={ref_profile_obj.steam_method} style="width: 162px;">
                 </td>
                 <th>물의 양</th>
                 <td><input type="number" class="input_style input_half_style" bind:value={ref_profile_obj.water_weight}>ml</td>               
@@ -223,60 +207,50 @@
     </div>
     <div class="div_container_right_cls">
         <div class="div_print_cls">
-            <div class="div_print_head_cls">
-                <div class="div_print_head_img_cls">
-                    <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.png`} alt="">
-                </div>
+            <div class="div_print_top_cls">
+                <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.svg`} alt="" style="width: 100%;">
+                <img src="/assets/images/logo_black.svg" alt="" style="width: 100px; margin: 2px 6px;">
             </div>
-
-            <div class="div_print_content_cls">
-                <div class="div_print_content_left_cls">
-                    <div class="div_print_content_hr_cls"></div>
-                    <div style="margin: 24px 0 12px; font-size: 14px;">Black Archive NO.{ref_geisha_obj.NO}</div>
-                    <img src="/assets/images/logo_green.svg" alt="" style="width: 168px;">
-                    <div class="div_print_content_eng_name_cls">{ref_geisha_obj.ENG_PRODUCT_NAME}</div>
-                    <div class="div_print_content_kor_name_cls">{ref_geisha_obj.KOR_PRODUCT_NAME}</div>
-                    <div class="div_print_content_hr_cls" style="margin:22px 0 24px 0;"></div>
-                    <div class="div_print_name_cls">
-                        <i>DEAR : <span class="span_print_name_cls">{ref_profile_obj.cust_name}</span></i>
+            <div class="div_print_middle_cls">
+                <div class="div_print_middle_left_cls">
+                    <div class="div_print_eng_name_cls">{ref_geisha_obj.ENG_PRODUCT_NAME}</div>
+                    <div class="div_print_kor_name_cls">{ref_geisha_obj.KOR_PRODUCT_NAME}</div>
+                    <div class="div_print_cust_name_cls">
+                        <i>Dear : <span class="span_print_cust_name_cls">{ref_profile_obj.cust_name}</span></i>
                     </div>
-                    <div class="div_print_name_cls" style="padding-top: 18px;">
-                        <i>Roasting Date : <span class="span_print_name_cls">{dayjs(ref_profile_obj.date).format("YYYY.MM.DD")}</span></i>
+                    <div class="div_print_cust_name_cls">
+                        <i>Roasting Date : <span class="span_print_cust_name_cls">{dayjs(ref_profile_obj.date).format("YYYY.MM.DD")}</span></i>
                     </div>
-                    <div class="div_print_content_hr_cls" style="margin: 26px 0 20px 0;"></div>
-                    <div class="div_print_content_head_cls" style="margin: 0 0 14px 0;">
-                        <hr class="hr_print_content_head_cls"><i>Note</i>
-                    </div>
-                    <div class="div_print_content_eng_note_cls">{ref_geisha_obj.ENG_NOTE}</div>
-                    <div class="div_print_content_kor_note_cls">{ref_geisha_obj.KOR_NOTE}</div>
-                </div>
-
-                <div style="border-right: 0.5px solid #040000; height: 404px; margin: 0 28px; opacity: 70%;"></div>
-
-                <div class="div_print_content_right_cls">
-                    <div class="div_print_content_head_cls" style="margin-top: 14px;">
-                        <hr class="hr_print_content_head_cls"><i>Information</i>
-                    </div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">재배고도</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.ALTITUDE}</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">생산지</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.ORIGIN_REGION}</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">품종</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.VARIETY}</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">가공법</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.PROCESS}</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">로스팅</div><div class="div_print_good_for_dot_cls">•</div>{ref_geisha_obj.ROASTING}</div>
-                    <div class="div_print_content_head_cls">
-                        <hr class="hr_print_content_head_cls"><i>Good For</i>
-                    </div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출도구</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.brew_method}</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물 온도</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_temperature}°C</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출방법</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.grind_recommend}</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">원두중량</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.bean_weight}g</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">뜸 들이기</div><div class="div_print_good_for_dot_cls">•</div>물 {ref_profile_obj.steam_water}ml<br>{ref_profile_obj.steam_method}</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">물의 양</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.water_weight}ml</div>
-                    <div class="div_print_good_for_cls"><div class="div_print_good_for_head_cls">추출시간</div><div class="div_print_good_for_dot_cls">•</div>{ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
-                    <div class="div_print_name_cls" style="margin-top: 44px; border-bottom: 0.5px solid #040000b3; padding-bottom: 12px; font-size: 12px;">
+                    <div class="div_print_cust_name_cls">
                         <i>From Roaster : </i>
                     </div>
                 </div>
-                
+                <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.png`} alt="" style="width: 348px; margin-top: 12px;">
+            </div>
+            <div class="div_print_bottom_cls">
+                <div class="div_print_bottom_des_cls">
+                    <div class="div_print_bottom_des_head_cls">INFORMATION</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">재배고도</div><div class="div_print_info_dot_cls">•</div>{ref_geisha_obj.ALTITUDE}</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">생산지</div><div class="div_print_info_dot_cls">•</div>{ref_geisha_obj.ORIGIN_REGION}</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">품종</div><div class="div_print_info_dot_cls">•</div>{ref_geisha_obj.VARIETY}</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">가공법</div><div class="div_print_info_dot_cls">•</div>{ref_geisha_obj.PROCESS}</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">로스팅</div><div class="div_print_info_dot_cls">•</div>{ref_geisha_obj.ROASTING}</div>
+                </div>
+                <div class="div_print_bottom_des_cls" style="width: 120px; border-left: none; border-right: none;">
+                    <div class="div_print_bottom_des_head_cls">NOTE</div>
+                    <div class="div_print_eng_note_cls">{ref_geisha_obj.ENG_NOTE}</div>
+                    <div class="div_print_kor_note_cls">{ref_geisha_obj.KOR_NOTE}</div>
+                </div>
+                <div class="div_print_bottom_des_cls" style="width: 196px;">
+                    <div class="div_print_bottom_des_head_cls">GOOD FOR</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">추출도구</div><div class="div_print_info_dot_cls">•</div>{ref_profile_obj.brew_method}</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">물 온도</div><div class="div_print_info_dot_cls">•</div>{ref_profile_obj.water_temperature}°C</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">추출방법</div><div class="div_print_info_dot_cls">•</div>{ref_profile_obj.grind_recommend}</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">원두중량</div><div class="div_print_info_dot_cls">•</div>{ref_profile_obj.bean_weight}g</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">뜸 들이기</div><div class="div_print_info_dot_cls">•</div>물 {ref_profile_obj.steam_water}ml<br>{ref_profile_obj.steam_method}</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">물의 양</div><div class="div_print_info_dot_cls">•</div>{ref_profile_obj.water_weight}ml</div>
+                    <div class="div_print_info_cls"><div class="div_print_info_head_cls">추출시간</div><div class="div_print_info_dot_cls">•</div>{ref_profile_obj.brew_start_minute}분 {ref_profile_obj.brew_start_second}초 ~ {ref_profile_obj.brew_end_minute}분 {ref_profile_obj.brew_end_second}초</div>
+                </div>
             </div>
         </div>
         <button on:click={on_click_print} class="btn btn_orange btn_print_cls">출 력 하 기</button>
