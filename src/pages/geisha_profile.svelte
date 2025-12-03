@@ -45,6 +45,7 @@
         padding: 23px 12px;
         box-sizing: border-box; 
         color: #040000;
+        background-color: #fcf4e5;
         font-family: 'HappinessSans', sans-serif;
         white-space: pre-line;
     }
