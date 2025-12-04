@@ -45,13 +45,13 @@
         padding: 23px 12px;
         box-sizing: border-box; 
         color: #040000;
-        background-color: #fcf4e5;
         font-family: 'HappinessSans', sans-serif;
         white-space: pre-line;
     }
     .div_print_top_cls {
-        text-align: end;
-        margin: 0 10px 4px;
+        text-align: center;
+        position: relative;
+        margin-bottom: 16px;
     }
     .div_print_middle_cls {
         display: flex; 
@@ -62,7 +62,7 @@
     }
     .div_print_bottom_cls {
         display: flex;
-        margin-top: 10px;
+        margin-top: 12px;
     }
 
     /* 프린트 미리보기 (상세) */
@@ -209,8 +209,8 @@
     <div class="div_container_right_cls">
         <div class="div_print_cls">
             <div class="div_print_top_cls">
-                <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.svg`} alt="" style="width: 100%;">
-                <img src="/assets/images/logo_black.svg" alt="" style="width: 100px; margin: 2px 6px;">
+                <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.svg`} alt="" style="width: 500px;">
+                <img src="/assets/images/logo_black.svg" alt="" style="width: 99px; position: absolute; bottom: -7px; right: 23px;">
             </div>
             <div class="div_print_middle_cls">
                 <div class="div_print_middle_left_cls">
