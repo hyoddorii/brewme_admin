@@ -42,7 +42,7 @@
         min-width: 560px;
         height: 795px;
         min-height: 795px;
-        padding: 23px 12px;
+        padding: 18px 12px;
         box-sizing: border-box; 
         color: #040000;
         font-family: 'HappinessSans', sans-serif;
