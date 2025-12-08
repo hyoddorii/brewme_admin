@@ -42,7 +42,7 @@
         min-width: 560px;
         height: 795px;
         min-height: 795px;
-        padding: 18px 12px;
+        padding: 18px 14px;
         box-sizing: border-box; 
         color: #040000;
         font-family: 'HappinessSans', sans-serif;
@@ -278,7 +278,7 @@
         date: dayjs().format("YYYY-MM-DD"),
         brew_method: "HARIO v60",
         water_temperature: "91",
-        grind_recommend: "핸드드립",
+        grind_recommend: "홀빈",
         bean_weight: "20",
         water_weight: "250",
         steam_water: "40",
@@ -363,7 +363,7 @@
             date: dayjs().format("YYYY-MM-DD"),
             brew_method: "HARIO v60",
             water_temperature: "91",
-            grind_recommend: "핸드드립",
+            grind_recommend: "홀빈",
             bean_weight: "20",
             water_weight: "250",
             steam_water: "40",
