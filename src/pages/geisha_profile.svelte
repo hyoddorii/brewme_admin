@@ -62,7 +62,7 @@
     }
     .div_print_bottom_cls {
         display: flex;
-        margin-top: 12px;
+        margin-top: 20px;
     }
 
     /* 프린트 미리보기 (상세) */
@@ -226,7 +226,7 @@
                         <i>From Roaster : </i>
                     </div>
                 </div>
-                <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.png`} alt="" style="width: 348px; margin-top: 12px;">
+                <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.png`} alt="" style="width: 340px; margin-top: 12px;">
             </div>
             <div class="div_print_bottom_cls">
                 <div class="div_print_bottom_des_cls">
@@ -320,7 +320,7 @@
         const spreadsheet_id = "19ihBTMF-2UtvTTlA9v_pfcANQU_iZeqwoev57zwWtuw";  // 여기에 스프레드시트 ID 입력
         const sheet_name = "no_edit";  // 사용 중인 시트 이름으로 변경
         const api_key = "AIzaSyDoCUV43uDId92XUWiMZ73ABPFR8V-AGmk";  // Google Sheets API 키 입력
-        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheet_id}/values/${sheet_name}!A2:L4?key=${api_key}`;
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheet_id}/values/${sheet_name}!A2:L5?key=${api_key}`;
 
         try {
             const response = await fetch(url);
