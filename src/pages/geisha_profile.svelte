@@ -71,6 +71,7 @@
         font-size: 14px;
         line-height: 1.3;
         letter-spacing: -0.3px;
+        margin-top: 4px;
     }
     .div_print_kor_name_cls {
         font-size: 12px;
@@ -226,7 +227,7 @@
                         <i>From Roaster : </i>
                     </div>
                 </div>
-                <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.png`} alt="" style="width: 340px; margin-top: 12px;">
+                <img src={`/assets/images/geisha/${ref_geisha_obj.IMG_NAME}.png`} alt="" style="width: 340px; margin-top: 12px; max-height: 417px;">
             </div>
             <div class="div_print_bottom_cls">
                 <div class="div_print_bottom_des_cls">
