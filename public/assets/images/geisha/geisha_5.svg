@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383.45 59.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #131313;
+        font-family: MinionConceptRoman-DisplayBold, 'Minion Variable Concept';
+        font-size: 49.96px;
+        font-variation-settings: 'wght' 700, 'opsz' 36;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        letter-spacing: .02em;
+      }
+
+      .cls-4 {
+        letter-spacing: .01em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: .01em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 41.21) scale(1.04 1)"><tspan x="0" y="0">B</tspan><tspan class="cls-7" x="29.77" y="0">l</tspan><tspan class="cls-5" x="43.16" y="0">a</tspan><tspan class="cls-9" x="64.64" y="0">c</tspan><tspan x="84.92" y="0">k </tspan><tspan class="cls-3" x="117.29" y="0">A</tspan><tspan x="147.26" y="0">r</tspan><tspan class="cls-10" x="165.7" y="0">c</tspan><tspan x="185.98" y="0">h</tspan><tspan class="cls-4" x="211.65" y="0">i</tspan><tspan class="cls-6" x="225.49" y="0">v</tspan><tspan x="246.52" y="0">e </tspan><tspan class="cls-2" x="276.34" y="0">N</tspan><tspan class="cls-8" x="311.16" y="0">o</tspan><tspan x="336.49" y="0">.5</tspan></text>
+</svg>
