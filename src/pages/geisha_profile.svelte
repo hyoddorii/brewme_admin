@@ -321,7 +321,7 @@
         const spreadsheet_id = "19ihBTMF-2UtvTTlA9v_pfcANQU_iZeqwoev57zwWtuw";  // 여기에 스프레드시트 ID 입력
         const sheet_name = "no_edit";  // 사용 중인 시트 이름으로 변경
         const api_key = "AIzaSyDoCUV43uDId92XUWiMZ73ABPFR8V-AGmk";  // Google Sheets API 키 입력
-        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheet_id}/values/${sheet_name}!A2:L7?key=${api_key}`;
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheet_id}/values/${sheet_name}!A2:L8?key=${api_key}`;
 
         try {
             const response = await fetch(url);
